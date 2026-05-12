@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Quiet Luxury Bathroom Look I Keep Coming Back To | The Tidy Magpie</title>
+<meta name="description" content="A calm, elegant journal post from The Tidy Magpie on creating a quiet luxury bathroom with orchids, woven textures, white towels and thoughtful storage.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --cream:#f7f4ef;
+  --white:#fffdfa;
+  --ink:#22201d;
+  --soft:#5e5750;
+  --muted:#7b746d;
+  --line:#ddd4c8;
+  --sage:#667751;
+  --gold:#bea06a;
+}
+
+body{
+  background:linear-gradient(to bottom,#fffdfa 0%,#f7f4ef 100%);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  line-height:1.8;
+}
+
+a{color:inherit;text-decoration:none}
+
+.top{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:1.8rem 0 0.5rem;
+}
+
+.top-left{
+  font-size:0.68rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  line-height:1.8;
+}
+
+.top-right{
+  display:flex;
+  gap:1.7rem;
+  font-size:0.72rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
+
+.header{
+  text-align:center;
+  padding:0.2rem 0 2rem;
+}
+
+.orchid-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:0.25rem;
+}
+
+.orchid-svg{
+  width:150px;
+  height:auto;
+  display:block;
+}
+
+.brand-small{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.4rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  margin-bottom:0.3rem;
+}
+
+.brand-small:before,
+.brand-small:after{
+  content:"";
+  width:82px;
+  height:1px;
+  background:var(--line);
+}
+
+.brand-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(5rem,15vw,11rem);
+  line-height:0.82;
+  letter-spacing:0.09em;
+  font-weight:500;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
+
+.magpie{
+  background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.brand-tag{
+  font-size:0.78rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+}
+
+nav{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1050px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 0;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:0.74rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding-bottom:0.28rem;
+  border-bottom:1px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+  color:var(--sage);
+  border-color:var(--sage);
+}
+
+.article-wrap{
+  width:min(860px,92%);
+  margin:0 auto;
+  padding:4rem 0 4.5rem;
+}
+
+.article-kicker{
+  font-size:0.74rem;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:1rem;
+  text-align:center;
+}
+
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,7vw,5.2rem);
+  line-height:1.05;
+  font-weight:500;
+  text-align:center;
+  margin-bottom:1.8rem;
+}
+
+.intro{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.3rem,2.5vw,1.8rem);
+  line-height:1.5;
+  color:var(--soft);
+  text-align:center;
+  max-width:680px;
+  margin:0 auto 3rem;
+}
+
+.article{
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:clamp(1.5rem,4vw,3rem);
+}
+
+.article p{
+  margin-bottom:1.35rem;
+  color:var(--soft);
+  font-size:1rem;
+}
+
+.article h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,3vw,2.5rem);
+  font-weight:500;
+  margin:2.4rem 0 1rem;
+}
+
+.article ul{
+  margin:0 0 1.7rem 1.2rem;
+  color:var(--soft);
+}
+
+.article li{
+  margin-bottom:0.35rem;
+}
+
+.shop-box{
+  margin-top:2.5rem;
+  padding:2rem;
+  background:#f7f4ef;
+  border:1px solid var(--line);
+}
+
+.shop-box p{
+  font-size:0.82rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-bottom:1rem;
+}
+
+.shop-links{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0.8rem 1.2rem;
+}
+
+.shop-links a{
+  border-bottom:1px solid var(--line);
+  padding-bottom:0.45rem;
+  color:var(--ink);
+}
+
+.back-link{
+  display:inline-block;
+  margin-top:2.2rem;
+  font-size:0.75rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--sage);
+  border-bottom:1px solid var(--sage);
+}
+
+footer{
+  background:var(--sage);
+  color:#f8f5ef;
+  padding:1.3rem 0;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:700px){
+  .top{flex-direction:column;align-items:center;gap:1rem;text-align:center}
+  .top-right{flex-wrap:wrap;justify-content:center}
+  .brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:0.04em}
+  .brand-small:before,.brand-small:after{width:40px}
+  .nav-inner{justify-content:center}
+  .shop-links{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
+</head>
+
+<body>
+
+  <div class="top">
+    <div class="top-left">Curated home finds for<br>beautiful, useful everyday living.</div>
+    <div class="top-right">
+      <a href="#">Pinterest</a>
+      <a href="quiet-luxury-bathroom.html">Journal</a>
+      <a href="#">Email</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="orchid-wrap">
+      <svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/>
+          <path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/>
+          <path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/>
+          <path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/>
+          <path d="M120 103 C111 112 107 127 112 140"/>
+          <path d="M120 103 C129 112 133 127 128 140"/>
+          <path d="M112 116 C105 120 103 130 108 139"/>
+          <path d="M128 116 C135 120 137 130 132 139"/>
+          <path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/>
+          <path d="M108 139 C114 151 126 151 132 139"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="brand-small">The Tidy</div>
+    <div class="brand-title"><span class="magpie">Magpie</span></div>
+    <div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html">Home</a>
+      <a href="#">Kitchen</a>
+      <a href="#">Storage & Organisation</a>
+      <a href="#">Gifts</a>
+      <a href="#">Pinterest</a>
+      <a class="active" href="quiet-luxury-bathroom.html">Journal</a>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+    <div class="article-kicker">Journal</div>
+    <h1>The Quiet Luxury Bathroom Look I Keep Coming Back To</h1>
+    <p class="intro">There’s something about a soft, light-filled bathroom that instantly makes a home feel calmer.</p>
+
+    <article class="article">
+      <p>Not overly styled. Not filled with trends. Just simple, beautiful things chosen carefully — fluffy white towels, soft natural textures, warm light, fresh greenery and those little details that quietly make everyday routines feel more enjoyable.</p>
+
+      <p>I always find myself returning to the same look over and over again: white orchids against creamy tones, woven textures, pale woods and clean glass. It feels fresh without being cold, elegant without trying too hard.</p>
+
+      <p>One of the easiest ways to recreate this feeling is by focusing less on decorating and more on atmosphere. A bathroom doesn’t need dozens of products to feel luxurious. Sometimes a single orchid, a lovely candle and a beautiful basket for rolled towels completely changes the mood of the room.</p>
+
+      <p>Natural textures make such a difference too. Woven baskets instantly soften hard bathroom surfaces, especially alongside white tiles and chrome fittings. Even practical storage can become part of the design when it’s chosen well.</p>
+
+      <p>I also love mixing spa-inspired touches with everyday practicality:</p>
+
+      <ul>
+        <li>neatly folded white towels</li>
+        <li>wooden bath stools</li>
+        <li>glass jars for cotton pads and bath salts</li>
+        <li>soft neutral bath mats</li>
+        <li>gentle lighting</li>
+        <li>trailing greenery or orchids</li>
+      </ul>
+
+      <p>It’s a quieter kind of luxury — the sort that makes a home feel peaceful rather than perfect.</p>
+
+      <p>And honestly, that’s the feeling I always want <em>The Tidy Magpie</em> to have. Beautiful and useful at the same time.</p>
+
+      <div class="shop-box">
+        <h2>Shop The Look</h2>
+        <p>Ad | Affiliate links — similar items inspired by this look.</p>
+        <div class="shop-links">
+          <a href="#">White orchid plants</a>
+          <a href="#">Woven plant baskets</a>
+          <a href="#">White luxury towels</a>
+          <a href="#">Neutral bath mats</a>
+          <a href="#">Wooden bathroom stools</a>
+          <a href="#">Bathroom storage jars</a>
+          <a href="#">Candles and reed diffusers</a>
+          <a href="#">Chrome shower storage</a>
+        </div>
+      </div>
+
+      <p style="margin-top:2rem;">The best spaces are rarely the most expensive ones. They’re usually the ones that feel thoughtful, calm and lived in.</p>
+
+      <a class="back-link" href="index.html">← Back to home</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>About | Contact | Privacy</div>
+      <div>© The Tidy Magpie</div>
+    </div>
+  </footer>
+
+</body>
+</html>
