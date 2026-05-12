@@ -237,6 +237,36 @@ h1{
   margin-bottom:1rem;
 }
 
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+
+.product-card{
+  display:block;
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:1.1rem;
+}
+
+.product-card span{
+  display:block;
+  font-size:0.78rem;
+  letter-spacing:0.13em;
+  text-transform:uppercase;
+  color:var(--ink);
+  margin-bottom:0.55rem;
+}
+
+.product-card small{
+  display:block;
+  font-size:0.9rem;
+  line-height:1.55;
+  color:var(--soft);
+}
+
 .shop-links{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -281,7 +311,38 @@ footer{
   .brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:0.04em}
   .brand-small:before,.brand-small:after{width:40px}
   .nav-inner{justify-content:center}
-  .shop-links{grid-template-columns:1fr}
+  
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+
+.product-card{
+  display:block;
+  background:var(--white);
+  border:1px solid var(--line);
+  padding:1.1rem;
+}
+
+.product-card span{
+  display:block;
+  font-size:0.78rem;
+  letter-spacing:0.13em;
+  text-transform:uppercase;
+  color:var(--ink);
+  margin-bottom:0.55rem;
+}
+
+.product-card small{
+  display:block;
+  font-size:0.9rem;
+  line-height:1.55;
+  color:var(--soft);
+}
+
+.shop-links{grid-template-columns:1fr}
+  .product-grid{grid-template-columns:1fr}
   .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
 }
 </style>
@@ -369,15 +430,27 @@ footer{
       <div class="shop-box">
         <h2>Shop The Look</h2>
         <p>Ad | Affiliate links — similar items inspired by this look.</p>
-        <div class="shop-links">
-          <a href="#">White orchid plants</a>
-          <a href="#">Woven plant baskets</a>
-          <a href="#">White luxury towels</a>
-          <a href="#">Neutral bath mats</a>
-          <a href="#">Wooden bathroom stools</a>
-          <a href="#">Bathroom storage jars</a>
-          <a href="#">Candles and reed diffusers</a>
-          <a href="#">Chrome shower storage</a>
+        <div class="product-grid">
+          <a class="product-card" href="https://www.amazon.co.uk/Elegant-Butterfly-Artificial-Orchid-Decorative/dp/B0DHYCLFWR/ref=sr_1_49_sspa?crid=2V3DAXG6ZOOHD&amp;dib=eyJ2IjoiMSJ9.ZUEcGqH9TEi1CTN8A2EQePgOyCDC9EfLOtPIAvEJW6ra3USY0t-AC2kxO0dbtyDBl7A4GG_Lylq0B7B_nmI_3F0DVDiaSKp53XmxV5TS_EntByfQsiWjCup7VNstYWMP9FKT2MP9e6KEGLVPYwD--K_Q9xx-sWBHpLV6oGn32OZ37yomPVbzf9Qp9a53V5cwgHW0Ci2Unpw540dIDW9Z0ZKRFFtrCkLcipRHFVdknAwBmOMLeS9sx1EWMl8pFbB3wJczTLXNSIv9vKeIMqyHpa3P-LxfP8Jqihgs4bcwQWQ.jWmJGJMIDHX4PmrJkQPs8iShiau_TWx64iAkfhGVW-g&amp;dib_tag=se&amp;keywords=large%2Bfaux%2Borchid%2Bplant%2Bin%2Bpot%2Bwhite&amp;qid=1778594809&amp;sprefix=white%2Borchid%2Bpot%2Caps%2C135&amp;sr=8-49-spons&amp;aref=yP0ItftY0m&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9idGY&amp;th=1" target="_blank" rel="nofollow sponsored noopener">
+            <span>White Faux Orchid Arrangement</span>
+            <small>A pretty way to bring that calm spa-style look into the bathroom without worrying about light, humidity or keeping it alive.</small>
+          </a>
+          <a class="product-card" href="https://www.amazon.co.uk/NATTHSWE-Decoration-Foldable-Laundry-Household/dp/B08S6VP1JT/ref=sr_1_2_sspa?crid=3QM16Q5NAOK76&amp;dib=eyJ2IjoiMSJ9.AjR7aDbKM3RhHR3xM5JcRY5TdrSZibQlByDskY-R_wMpmA5YfdJ5MIbaMlOnXnz0jgv2QFFF7sh9Gsm8Qu9Uv-VkS9doZF4tusxh6BhCktvSny9NWjETU4owxOhUQCTxGm7dPehEVa9-IMlSwnbpghWFrNAZp2icMX2yvVSEF5lr1sO_AM9V3K4NJrtU5xgfsdLtB4EOZD_JMhjQUhQrT7i3wIqUqkvX03yiOJnkbgR5gsQoKA_OltmzuBIyMlQ47L1LxB_lQhzU4Hi82nK0B56oQIxJUL48yWnX7duZDcI.HF6r4MkC32fJV1jDBxlsEa2urWg9nhO6FXBgrqGK1q0&amp;dib_tag=se&amp;keywords=woven%2Bbaskets%2Bplant%2Bpots&amp;qid=1778594913&amp;sprefix=woven%2Bbaskets%2Bplant%2Bpots%2Caps%2C124&amp;sr=8-2-spons&amp;aref=ONlkT1rEAL&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;th=1" target="_blank" rel="nofollow sponsored noopener">
+            <span>Woven Basket Plant Pot Cover</span>
+            <small>Lovely for softening a bathroom corner, hiding plain plant pots, or adding natural texture beside white orchids and towels.</small>
+          </a>
+          <a class="product-card" href="https://www.amazon.co.uk/Infinitee-Xclusives-Absorbent-Bathroom-Brilliant/dp/B09NL3HHC1/ref=sr_1_9?crid=CY1TRAL6KH79&amp;dib=eyJ2IjoiMSJ9.AmsF2PVNS2RqMGwd3egDoX_bUxK-vpVsr2UNUrO4lwg-_jLwBgWBl7gMM9CtCO6Oq0iM_U3Bmhxy7fpBErHv679TJDrhSgOIC_peplOhNlEaIvnFN6lW86Lfo8ltoKRGfykGb-x_0A770fhBDnDP83Urt9IN8z3OvitwpuoIyf3AvB3l1_IM-NO5niTyLEvstFJmvkIjJDYAaMrcOhmToA0Vhz4sR7I-V9HNGYFFBd7dsmpupfLWnbgwc4-HXP_xPav_ufLR1qkCTaYOmPebFiEYAYg5HtuQmRz-eDOjQlE.RWVkZr7_-LjKF1uR-aot1K9qFN3k5C-4pFJ5rmknm_M&amp;dib_tag=se&amp;keywords=fluffy%2Blarge%2Bwhite%2Btowels&amp;qid=1778595023&amp;sprefix=fluffy%2Blarge%2Bwhite%2Btowels%2Caps%2C159&amp;sr=8-9&amp;th=1" target="_blank" rel="nofollow sponsored noopener">
+            <span>Soft White Bathroom Towels</span>
+            <small>Fresh white towels always make a bathroom feel cleaner, brighter and more spa-like.</small>
+          </a>
+          <a class="product-card" href="https://www.amazon.co.uk/saffruff-No-Drilling-Organiser-Bathroom-Accessory/dp/B0CZ4296DY/ref=sr_1_4_sspa?crid=3HO89B6B4EKP0&amp;dib=eyJ2IjoiMSJ9.Giz268V-l5RB1t2DsCZp6cU-G34LVVgNJ6krq6Ksnc1dT4hF6FHBmsyu4XAf95GSKEG-VFBnJkyL2wQBj8y90nqX_hn1LUrsW9xKuIxlGQKjn1Il4asAENHRCEaXTxhLmqcin_IDIGRc98xLQU3FN7Fc6Y7nJc1525yb2yndkcFTQcAWIpOwewmLbOu4cqtw0EMrgSYQEjWXwFh0RWUFcHObpLTybagyjhs6PJdjs4CsTTWoNDnSH2F-0rItOCFaePESRoDlFhC0dZ3BTOYnlBS5odp3oLwSWthC863DkfU.65DrK7KHfCR5zv4bEUW9jBtwEhcxTcz7SUTjJ6Vl7CU&amp;dib_tag=se&amp;keywords=chrome%2Bshower%2Bcaddy&amp;qid=1778595078&amp;sprefix=chrome%2Bshower%2Bcaddy%2Caps%2C162&amp;sr=8-4-spons&amp;aref=t7tfvRwLOV&amp;sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&amp;th=1" target="_blank" rel="nofollow sponsored noopener">
+            <span>Chrome No-Drill Shower Caddy</span>
+            <small>A neat way to keep shampoo, body wash and shower essentials organised without making the bathroom feel cluttered.</small>
+          </a>
+          <a class="product-card" href="https://www.amazon.co.uk/Sumnacon-3-Sizes-Apothecary-Jars-Cotton-Ball-Swabs-Holder-Clear-Acrylic-Bathroom-Storage-Container-with-Lid/dp/B08DH5TD2Q/ref=sr_1_16?crid=C4R6N2VAVSJ6&amp;dib=eyJ2IjoiMSJ9.Ewm8WNpCcn2TXMBtmsZTYUmZPcTBFtx0UqIdkjblhCg3ZdTH_HOHG8YgzgPTUtMN3ZWSXJuyXGs3rsqWdICgMo2gISHKALyjyJMv60fYIx8HVJ1ZBQOfj9LgDkm_u09ILONfNSuz2Clpd-pxEuTIKLuzIydjxDoMIxI81T6rErIeLQHUwA_DGqyh0Tz4Aq-eCxpi87jHvqKHLqeCCcYof4gmTcJHhn3-sDfz7izAq0nfNSqlkxHGGlm5To-Auj_LTjq5uMkbujb8j3rvowJfpS_2jZIwVw5j2V3GPSJh-aI.rODj9eiZSxlaIQ41HeWdGiLJUI3KFuZScfia-THZbrI&amp;dib_tag=se&amp;keywords=bathroom+storage+jars+for+bath+bombs&amp;qid=1778595224&amp;sprefix=bathroom+storgae+jars+%2Caps%2C144&amp;sr=8-16" target="_blank" rel="nofollow sponsored noopener">
+            <span>Clear Apothecary Bathroom Storage Jars</span>
+            <small>Beautiful for cotton pads, bath salts and small everyday essentials while keeping surfaces feeling calm and uncluttered.</small>
+          </a>
         </div>
       </div>
 
