@@ -1,724 +1,654 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Tidy Magpie — Curated Home Picks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Lato:wght@300;400&family=Great+Vibes&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tidy Magpie</title>
+<meta name="description" content="Curated home finds for beautiful, useful everyday living.">
 
-    :root {
-      --off-white:  #f7f3ec;
-      --charcoal:   #3f3f3f;
-      --sage:       #a8b5a2;
-      --taupe:      #9e8a78;
-      --blue:       #9fb7c9;
-      --sage-dark:  #6e8f68;
-      --sage-pale:  #eaf0e8;
-      --blue-pale:  #e4edf3;
-      --taupe-pale: #f0e9e1;
-      --blush:      #e8d5d0;
-      --blush-deep: #c9908a;
-      --white:      #ffffff;
-      --muted:      #4a4540;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
-    html { scroll-behavior: smooth; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    body {
-      background-color: var(--off-white);
-      color: var(--charcoal);
-      font-family: 'Lato', sans-serif;
-      font-weight: 300;
-      line-height: 1.75;
-    }
+:root{
+  --cream:#f7f4ef;
+  --white:#fffdfa;
+  --ink:#22201d;
+  --soft:#5e5750;
+  --muted:#7b746d;
+  --line:#ddd4c8;
+  --sage:#667751;
+  --gold:#bea06a;
+}
 
-    /* ── HEADER ── */
-    header {
-      background-image: url('header.png');
-      background-size: cover;
-      background-position: right top;
-      border-bottom: 1px solid rgba(168,181,162,0.15);
-      padding: 2.2rem 1.5rem 1.6rem;
-      text-align: left;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+body{
+  background:var(--cream);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  line-height:1.7;
+}
 
-    /* Gradient overlay — cream on left fading to transparent on right */
-    header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to right, rgba(247,243,236,0.97) 45%, rgba(247,243,236,0.7) 65%, rgba(247,243,236,0.1) 100%);
-      pointer-events: none;
-    }
+a{color:inherit;text-decoration:none}
 
-    header > * { position: relative; z-index: 1; max-width: 55%; }
+.page{background:linear-gradient(to bottom,#fffdfa 0%,#f7f4ef 100%)}
 
-    .header-deco {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1rem;
-      color: var(--sage-dark);
-      letter-spacing: 0.1em;
-      margin-bottom: 0.1rem;
-      opacity: 0.8;
-    }
+/* TOP */
 
-    .site-name {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(2.4rem, 8vw, 3.6rem);
-      font-weight: 400;
-      color: var(--charcoal);
-      letter-spacing: 0.02em;
-      line-height: 1.1;
-    }
+.top{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:1.8rem 0 0.5rem;
+}
 
-    .site-name em {
-      color: var(--sage-dark);
-    }
+.top-left{
+  font-size:0.68rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  line-height:1.8;
+}
 
-    .tagline {
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin: 0.45rem 0 1rem;
-    }
+.top-right{
+  display:flex;
+  gap:1.7rem;
+  font-size:0.72rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
 
-    .header-rule {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 0.6rem;
-      margin-bottom: 0.9rem;
-      color: var(--sage-dark);
-      font-size: 0.7rem;
-    }
+/* HEADER */
 
-    .header-rule::before,
-    .header-rule::after {
-      content: '';
-      display: block;
-      width: 40px;
-      height: 1px;
-      background: var(--sage);
-    }
+.header{
+  text-align:center;
+  padding:0.2rem 0 2rem;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 0.2rem 0.8rem;
-    }
+.orchid-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:0.25rem;
+}
 
-    nav a {
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-      padding: 0.25rem 0.5rem;
-      border-radius: 20px;
-      transition: all 0.2s;
-    }
+.orchid-svg{
+  width:150px;
+  height:auto;
+  display:block;
+}
 
-    nav a:hover {
-      color: var(--sage-dark);
-      background: rgba(168,181,162,0.2);
-    }
+.brand-small{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.4rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  margin-bottom:0.3rem;
+}
 
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(160deg, var(--charcoal) 0%, #2a2a2a 100%);
-      color: var(--off-white);
-      padding: 5rem 1.5rem 4rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+.brand-small:before,
+.brand-small:after{
+  content:"";
+  width:82px;
+  height:1px;
+  background:var(--line);
+}
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse at 10% 90%, rgba(168,181,162,0.22) 0%, transparent 50%),
-        radial-gradient(ellipse at 90% 10%, rgba(159,183,201,0.18) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(232,213,208,0.08) 0%, transparent 60%);
-      pointer-events: none;
-    }
+.brand-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(5rem,15vw,11rem);
+  line-height:0.82;
+  letter-spacing:0.09em;
+  font-weight:500;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      border: 1px solid rgba(168,181,162,0.12);
-      top: -80px;
-      right: -80px;
-      pointer-events: none;
-    }
+.magpie{
+  background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
 
-    .hero-inner {
-      position: relative;
-      max-width: 580px;
-      margin: 0 auto;
-    }
+.brand-tag{
+  font-size:0.78rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+}
 
-    .hero-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: clamp(1.8rem, 6vw, 2.6rem);
-      color: var(--sage);
-      margin-bottom: 0.3rem;
-      opacity: 0.9;
-    }
+/* NAV */
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 7vw, 3.2rem);
-      font-weight: 500;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
-      color: var(--off-white);
-    }
+nav{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--sage);
-    }
+.nav-inner{
+  width:min(1050px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 0;
+  gap:1rem;
+  flex-wrap:wrap;
+}
 
-    .hero p {
-      font-size: 0.9rem;
-      color: #b5aea6;
-      max-width: 400px;
-      margin: 0 auto 2rem;
-      line-height: 1.9;
-    }
+nav a{
+  font-size:0.74rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding-bottom:0.28rem;
+  border-bottom:1px solid transparent;
+}
 
-    .hero-pills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-    }
+nav a:hover,
+nav a.active{
+  color:var(--sage);
+  border-color:var(--sage);
+}
 
-    .hero-pill {
-      display: inline-block;
-      border: 1px solid rgba(168,181,162,0.4);
-      color: var(--sage);
-      font-size: 0.65rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      padding: 0.35rem 0.85rem;
-      border-radius: 20px;
-    }
+/* HERO */
 
-    /* ── INTRO ── */
-    .petal-divider {
-      background: var(--white);
-      padding: 1.8rem 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid var(--blush);
-    }
+.hero{
+  border-bottom:1px solid rgba(221,212,200,0.7);
+}
 
-    .petal-divider p {
-      max-width: 520px;
-      margin: 0 auto;
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.9;
-    }
+.hero-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  min-height:560px;
+}
 
-    .petal-divider strong {
-      font-weight: 400;
-      color: var(--sage-dark);
-    }
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-right:2rem;
+}
 
-    .script-accent {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.4rem;
-      color: var(--blush-deep);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,6vw,5rem);
+  line-height:1.14;
+  font-weight:500;
+  margin-bottom:1.4rem;
+  max-width:620px;
+}
 
-    /* ── SECTIONS ── */
-    .section {
-      padding: 3rem 1.5rem 2.5rem;
-      max-width: 980px;
-      margin: 0 auto;
-    }
+.hero p{
+  font-size:1rem;
+  color:var(--soft);
+  max-width:420px;
+  margin-bottom:2rem;
+}
 
-    .section-header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
+.cta{
+  display:inline-block;
+  width:fit-content;
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  padding-bottom:0.45rem;
+  border-bottom:1px solid var(--sage);
+  color:var(--sage);
+}
 
-    .section-eyebrow {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-bottom: 0.3rem;
-    }
+/* SIMPLE STILL LIFE — NO EXTERNAL IMAGES */
 
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.3rem, 4vw, 1.8rem);
-      font-weight: 500;
-      color: var(--charcoal);
-      margin-bottom: 0.6rem;
-    }
+.hero-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,#fffdfa 0%,#f2ece3 100%);
+}
 
-    .section-rule {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: var(--blush-deep);
-      font-size: 0.75rem;
-    }
+.still-life{
+  width:min(430px,90%);
+  height:430px;
+  position:relative;
+}
 
-    .section-rule::before,
-    .section-rule::after {
-      content: '';
-      display: block;
-      width: 50px;
-      height: 1px;
-      background: var(--blush);
-    }
+.branch{
+  position:absolute;
+  width:330px;
+  height:180px;
+  left:30px;
+  top:50px;
+}
 
-    /* ── PRODUCT CARDS ── */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-      gap: 1.5rem;
-    }
+.stem{
+  position:absolute;
+  width:280px;
+  height:3px;
+  background:#667751;
+  top:95px;
+  left:8px;
+  transform:rotate(-15deg);
+  border-radius:4px;
+}
 
-    .product-card {
-      background: var(--white);
-      border: 1px solid #ede5de;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform 0.28s ease, box-shadow 0.28s ease;
-      animation: fadeUp 0.55s ease both;
-    }
+.leaf{
+  position:absolute;
+  width:34px;
+  height:12px;
+  background:#667751;
+  border-radius:100% 0 100% 0;
+  opacity:.95;
+}
 
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 36px rgba(63,63,63,0.10);
-    }
+.vase{
+  position:absolute;
+  width:130px;
+  height:150px;
+  right:78px;
+  bottom:62px;
+  background:linear-gradient(135deg,#f4eddf,#d7cbb9);
+  border-radius:45% 45% 28% 28%;
+  box-shadow:inset -16px -8px 24px rgba(60,45,30,.08);
+}
 
-    .product-card:nth-child(1) { animation-delay: 0.05s; }
-    .product-card:nth-child(2) { animation-delay: 0.12s; }
-    .product-card:nth-child(3) { animation-delay: 0.19s; }
-    .product-card:nth-child(4) { animation-delay: 0.26s; }
+.vase:before{
+  content:"";
+  position:absolute;
+  width:60px;
+  height:26px;
+  border-radius:50%;
+  background:#e5dac9;
+  left:35px;
+  top:-10px;
+}
 
-    .product-img {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      background-color: var(--off-white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.candle{
+  position:absolute;
+  width:78px;
+  height:80px;
+  left:85px;
+  bottom:55px;
+  background:linear-gradient(90deg,#eadfce,#cfc0ac);
+  border-radius:8px 8px 18px 18px;
+}
 
-    .product-img::after {
-      content: attr(data-label);
-      font-size: 0.6rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--taupe);
-    }
+.candle:before{
+  content:"";
+  position:absolute;
+  width:78px;
+  height:18px;
+  left:0;
+  top:-9px;
+  background:#eee5d6;
+  border-radius:50%;
+}
 
-    .product-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+.flame{
+  position:absolute;
+  width:12px;
+  height:21px;
+  left:118px;
+  bottom:131px;
+  background:#c99442;
+  border-radius:60%;
+}
 
-    .product-img.sage  { background-color: var(--sage-pale); }
-    .product-img.blue  { background-color: var(--blue-pale); }
-    .product-img.taupe { background-color: var(--taupe-pale); }
-    .product-img.blush { background-color: #f5eceb; }
+.dish{
+  position:absolute;
+  width:180px;
+  height:42px;
+  right:35px;
+  bottom:42px;
+  background:linear-gradient(180deg,#eee4d4,#cfc2af);
+  border-radius:50%;
+}
 
-    .product-body { padding: 1rem 1.15rem 1.3rem; }
+/* COLLECTIONS */
 
-    .product-room {
-      font-size: 0.6rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--taupe);
-      margin-bottom: 0.25rem;
-    }
+.collections{
+  width:min(1180px,92%);
+  margin:auto;
+  padding:3.7rem 0 2.8rem;
+}
 
-    .product-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 0.98rem;
-      font-weight: 500;
-      line-height: 1.35;
-      margin-bottom: 0.45rem;
-      color: var(--charcoal);
-    }
+.row{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:1.3rem;
+  align-items:center;
+  margin-bottom:1.8rem;
+}
 
-    .product-desc {
-      font-size: 0.78rem;
-      color: var(--muted);
-      line-height: 1.7;
-      margin-bottom: 1rem;
-    }
+.row h2{
+  font-size:0.82rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-weight:500;
+}
 
-    .product-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      background-color: var(--charcoal);
-      color: var(--off-white);
-      font-size: 0.65rem;
-      letter-spacing: 0.13em;
-      text-transform: uppercase;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      text-decoration: none;
-      transition: background-color 0.2s;
-    }
+.line{height:1px;background:var(--line)}
 
-    .product-link:hover { background-color: var(--sage-dark); }
+.row a{
+  font-size:0.72rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--sage);
+}
 
-    /* ── SECTION BACKGROUNDS ── */
-    .bg-white  { background: var(--white); }
-    .bg-sage   { background: var(--sage-pale); }
-    .bg-blue   { background: var(--blue-pale); }
-    .bg-taupe  { background: var(--taupe-pale); }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
 
-    /* ── DISCLOSURE ── */
-    .disclosure {
-      background: linear-gradient(135deg, var(--blush) 0%, var(--blue-pale) 100%);
-      padding: 1.2rem 1.5rem;
-      text-align: center;
-      font-size: 0.72rem;
-      color: var(--muted);
-      line-height: 1.7;
-      border-top: 1px solid #ddd5d0;
-    }
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  overflow:hidden;
+  min-width:0;
+}
 
-    /* ── FOOTER ── */
-    footer {
-      background-color: var(--charcoal);
-      color: var(--taupe);
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      font-size: 0.74rem;
-      letter-spacing: 0.06em;
-    }
 
-    .footer-script {
-      font-family: 'Great Vibes', cursive;
-      font-size: 1.8rem;
-      color: var(--sage);
-      display: block;
-      margin-bottom: 0.5rem;
-    }
 
-    footer a { color: var(--blue); text-decoration: none; }
-    footer a:hover { color: var(--off-white); }
+.card-img{
+  aspect-ratio:1/0.95;
+  background:#e9e2d8;
+}
 
-    .footer-hearts { color: var(--blush-deep); font-size: 0.7rem; margin-top: 0.5rem; opacity: 0.6; }
 
-    /* ── ANIMATION ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
 
-    /* ── MOBILE ── */
-    @media (max-width: 480px) {
-      .product-grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .product-body { padding: 0.8rem; }
-      .product-name { font-size: 0.88rem; }
-      .product-desc { display: none; }
-    }
-  </style>
+.card-img.kitchen{background:linear-gradient(135deg,#e8ded0,#fffdfa 45%,#b99564)}
+.card-img.storage{background:radial-gradient(circle at 50% 48%,#c49c5f 0 25%,transparent 26%),linear-gradient(135deg,#f5eee4,#c6ad8b)}
+.card-img.gifts{background:linear-gradient(135deg,transparent 45%,rgba(37,73,50,.28) 45% 52%,transparent 52%),linear-gradient(45deg,transparent 43%,rgba(37,73,50,.28) 43% 50%,transparent 50%),#eee3d6}
+.card-img.pinterest{background:radial-gradient(circle at 66% 25%,#f1f0df 0 12%,transparent 13%),radial-gradient(circle at 48% 44%,#d6ceb5 0 18%,transparent 19%),linear-gradient(160deg,#f7f1e8,#d8cbb9)}
+
+.card-footer{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:0.45rem;
+  min-height:118px;
+  padding:1.2rem 1.25rem;
+  border-top:1px solid var(--line);
+  font-size:0.78rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+}
+
+
+
+.card-footer span:last-child{
+  font-size:1.1rem;
+  letter-spacing:0;
+  color:var(--sage);
+}
+
+/* STRIP */
+
+.strip{
+  width:min(1180px,92%);
+  margin:0 auto 3rem;
+  background:linear-gradient(135deg,#f2ece2,#fffdfa);
+  border:1px solid var(--line);
+  display:grid;
+  grid-template-columns:120px 1fr auto;
+  gap:1rem;
+  align-items:center;
+  padding:2rem;
+}
+
+.strip-mark{
+  font-size:2.3rem;
+  color:var(--gold);
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.strip p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,2vw,1.7rem);
+  line-height:1.45;
+  color:var(--soft);
+}
+
+.strip a{
+  border:1px solid var(--sage);
+  padding:0.9rem 1.5rem;
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--sage);
+}
+
+.disclosure{
+  width:min(860px,92%);
+  margin:auto;
+  text-align:center;
+  padding:1.5rem 0 2.3rem;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+footer{
+  background:var(--sage);
+  color:#f8f5ef;
+  padding:1.3rem 0;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-copy{padding:4rem 0 2rem;text-align:center;align-items:center}
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
+  .strip{grid-template-columns:1fr;text-align:center}
+  .top{flex-direction:column;align-items:center;gap:1rem;text-align:center}
+}
+
+@media(max-width:560px){
+  .brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:0.04em}
+  .brand-small:before,.brand-small:after{width:40px}
+  .nav-inner{justify-content:center}
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
+  .row{grid-template-columns:1fr}
+  .line{display:none}
+  .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
 </head>
+
 <body>
+<div class="page">
 
-<!-- HEADER -->
-<header>
-  <div class="header-deco">welcome to</div>
-  <div class="site-name">The Tidy <em>Magpie</em></div>
-  <div class="tagline">Curated home picks &nbsp;·&nbsp; Honest finds &nbsp;·&nbsp; Organised living</div>
-  <div class="header-rule">✦</div>
+  <div class="top">
+    <div class="top-left">Curated home finds for<br>beautiful, useful everyday living.</div>
+    <div class="top-right">
+      <a href="#">Pinterest</a>
+      <a href="#">Journal</a>
+      <a href="#">Email</a>
+    </div>
+  </div>
+
+  <header class="header">
+    
+<div class="orchid-wrap">
+      <svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none"
+           stroke="#BEA06A"
+           stroke-width="4"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+          <!-- large top petal -->
+          <path d="M120 10
+                   C92 39 88 80 120 111
+                   C152 80 148 39 120 10Z"/>
+
+          <!-- large left petal -->
+          <path d="M116 108
+                   C82 77 36 80 16 129
+                   C57 151 99 139 116 108Z"/>
+
+          <!-- large right petal -->
+          <path d="M124 108
+                   C158 77 204 80 224 129
+                   C183 151 141 139 124 108Z"/>
+
+          <!-- lower lip -->
+          <path d="M120 109
+                   C96 122 96 148 120 164
+                   C144 148 144 122 120 109Z"/>
+
+          <!-- centre folds -->
+          <path d="M120 103
+                   C111 112 107 127 112 140"/>
+          <path d="M120 103
+                   C129 112 133 127 128 140"/>
+          <path d="M112 116
+                   C105 120 103 130 108 139"/>
+          <path d="M128 116
+                   C135 120 137 130 132 139"/>
+          <path d="M120 112
+                   C116 124 116 137 120 149
+                   C124 137 124 124 120 112Z"/>
+          <path d="M108 139
+                   C114 151 126 151 132 139"/>
+
+        </g>
+      </svg>
+    </div>
+
+
+    <div class="brand-small">The Tidy</div>
+
+    <div class="brand-title">
+      <span class="magpie">Magpie</span>
+    </div>
+
+    <div class="brand-tag">
+      A quieter way to find beautiful, useful things for the home.
+    </div>
+  </header>
+
   <nav>
-    <a href="#kitchen">Kitchen</a>
-    <a href="#bedroom">Bedroom</a>
-    <a href="#bathroom">Bathroom</a>
-
-    <a href="#storage">Storage</a>
-    <a href="#laundry">Laundry</a>
+    <div class="nav-inner">
+      <a class="active" href="#">Home</a>
+      <a href="#">Kitchen</a>
+      <a href="#">Storage & Organisation</a>
+      <a href="#">Gifts</a>
+      <a href="#">Pinterest</a>
+      <a href="#">Journal</a>
+    </div>
   </nav>
-</header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-script">a tidier home</div>
-    <h1>one beautiful find<br><em>at a time</em></h1>
-    <p>My philosophy is simple — things should be beautiful and useful. They have to be one or the other, but ultimately they should be both.</p>
-    <div class="hero-pills">
-      <span class="hero-pill">✦ Amazon finds</span>
-      <span class="hero-pill">✦ Home organisation</span>
-      <span class="hero-pill">✦ Community favourites</span>
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>My philosophy is simple — things should be beautiful and useful.</h1>
+        <p>They have to be one or the other, but ultimately they should be both.</p>
+        <a href="#" class="cta">Explore the collection →</a>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <div class="still-life">
+          <div class="branch">
+            <div class="stem"></div>
+            <span class="leaf" style="left:54px;top:54px;transform:rotate(-55deg);"></span>
+            <span class="leaf" style="left:78px;top:78px;transform:rotate(32deg);"></span>
+            <span class="leaf" style="left:108px;top:47px;transform:rotate(-48deg);"></span>
+            <span class="leaf" style="left:132px;top:74px;transform:rotate(31deg);"></span>
+            <span class="leaf" style="left:162px;top:40px;transform:rotate(-42deg);"></span>
+            <span class="leaf" style="left:188px;top:66px;transform:rotate(28deg);"></span>
+            <span class="leaf" style="left:222px;top:35px;transform:rotate(-38deg);"></span>
+            <span class="leaf" style="left:246px;top:62px;transform:rotate(22deg);"></span>
+          </div>
+          <div class="vase"></div>
+          <div class="candle"></div>
+          <div class="flame"></div>
+          <div class="dish"></div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <section class="collections">
+    <div class="row">
+      <h2>Curated collections</h2>
+      <div class="line"></div>
+      <a href="#">View all collections →</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-img kitchen"></div>
+        <div class="card-footer"><span>Kitchen</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img storage"></div>
+        <div class="card-footer"><span>Storage & Organisation</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img gifts"></div>
+        <div class="card-footer"><span>Gifts</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img pinterest"></div>
+        <div class="card-footer"><span>Pinterest</span><span>→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="strip-mark">⌁</div>
+    <p>
+      Living beautifully isn’t about having more.<br>
+      It’s about choosing well and valuing what lasts.<br>
+      That’s the heart of what we share.
+    </p>
+    <a href="#">Read the journal →</a>
+  </section>
+
+  <div class="disclosure">
+    Some links on this site may be affiliate links. If you choose to buy something through them, I may earn a small commission at no extra cost to you.
   </div>
-</section>
 
-<!-- INTRO -->
-<div class="petal-divider">
-  <p>
-    I'm forever hunting for the <strong>storage solutions, organisers, and home bits</strong> that genuinely earn their place. I've done the scrolling so you don't have to — everything here comes recommended by the people who've actually bought it.
-  </p>
+  <footer>
+    <div class="footer-inner">
+      <div>About | Contact | Privacy</div>
+      <div>© The Tidy Magpie</div>
+    </div>
+  </footer>
+
 </div>
-
-<!-- KITCHEN -->
-<div class="bg-white" id="kitchen">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Room by room</div>
-      <h2 class="section-title">Kitchen Organisation</h2>
-      <div class="section-rule">✿</div>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img sage" data-label="Add photo"><!-- <img src="photo.jpg" alt=""> --></div>
-        <div class="product-body">
-          <div class="product-room">Drawers</div>
-          <div class="product-name">Adjustable Bamboo Drawer Dividers</div>
-          <p class="product-desc">The ones that actually stay put. Expand to fit almost any drawer and look beautiful from day one.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img sage" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Cupboards</div>
-          <div class="product-name">Stackable Pantry Bins with Labels</div>
-          <p class="product-desc">Clear-front so you can see everything at a glance. Stack them, label them, done.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img sage" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Worktop</div>
-          <div class="product-name">Compact Utensil Crock</div>
-          <p class="product-desc">Keeps everyday utensils within reach without cluttering the worktop. The matte finish goes with everything.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img sage" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Under sink</div>
-          <div class="product-name">Two-Tier Under-Sink Organiser</div>
-          <p class="product-desc">Doubles your under-sink space instantly. A sliding bottom drawer is a genuinely good idea.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- BEDROOM -->
-<div class="bg-taupe" id="bedroom">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Room by room</div>
-      <h2 class="section-title">Bedroom Organisation</h2>
-      <div class="section-rule">✿</div>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img blush" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Wardrobe</div>
-          <div class="product-name">Velvet Non-Slip Hangers (Set of 50)</div>
-          <p class="product-desc">Thin, strong, and clothes actually stay on them. Made a startling difference to wardrobe space.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blush" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Drawers</div>
-          <div class="product-name">Honeycomb Sock & Underwear Organiser</div>
-          <p class="product-desc">Finally, a drawer that stays tidy. Honeycomb cells keep everything separated and visible.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blush" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Bedside</div>
-          <div class="product-name">Linen Bedside Caddy</div>
-          <p class="product-desc">Book, phone, glasses, lip balm — all within reach without a cluttered bedside table.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blush" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Under bed</div>
-          <div class="product-name">Flat Storage Bags with Window</div>
-          <p class="product-desc">Season-swap bedding stored flat under the bed, protected and clearly visible.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- BATHROOM -->
-<div class="bg-blue" id="bathroom">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Room by room</div>
-      <h2 class="section-title">Bathroom Organisation</h2>
-      <div class="section-rule">✿</div>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Shower</div>
-          <div class="product-name">No-Drill Shower Caddy</div>
-          <p class="product-desc">Stays up without drilling a single hole. Rustproof, adjustable, holds a surprising amount.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Vanity</div>
-          <div class="product-name">Rotating Makeup & Skincare Organiser</div>
-          <p class="product-desc">Spins so you can reach the back without knocking everything over. A small thing that solves a daily annoyance.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Cabinet</div>
-          <div class="product-name">Clear Stackable Medicine Cabinet Bins</div>
-          <p class="product-desc">Transform a chaotic medicine cabinet into something that looks intentional.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<!-- STORAGE -->
-<div class="bg-sage" id="storage">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Room by room</div>
-      <h2 class="section-title">Storage Solutions</h2>
-      <div class="section-rule">✿</div>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img taupe" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Hallway</div>
-          <div class="product-name">Over-Door Hooks (Set of 6)</div>
-          <p class="product-desc">No screws, no damage, massive gain in hanging space. Sturdy enough for coats and bags.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img taupe" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Shelving</div>
-          <div class="product-name">Wicker Storage Baskets with Labels</div>
-          <p class="product-desc">The warmth of natural wicker with the practicality of a label holder. Works in any room.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img taupe" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Garage / Shed</div>
-          <div class="product-name">Heavy-Duty Stackable Storage Boxes</div>
-          <p class="product-desc">The boxes that actually stack without toppling. Robust, weatherproof, and sensible sizes.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- LAUNDRY -->
-<div class="bg-white" id="laundry">
-  <div class="section">
-    <div class="section-header">
-      <div class="section-eyebrow">Room by room</div>
-      <h2 class="section-title">Laundry &amp; Utility</h2>
-      <div class="section-rule">✿</div>
-    </div>
-    <div class="product-grid">
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Laundry</div>
-          <div class="product-name">Slim Divided Laundry Hamper</div>
-          <p class="product-desc">Two sections for lights and darks in a footprint that fits beside a washing machine.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Airing</div>
-          <div class="product-name">Folding Clothes Airer — Extra Wide</div>
-          <p class="product-desc">More rail space than a standard airer with a fold-flat design that stores behind a door.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-      <div class="product-card">
-        <div class="product-img blue" data-label="Add photo"></div>
-        <div class="product-body">
-          <div class="product-room">Cleaning</div>
-          <div class="product-name">Wall-Mounted Mop & Broom Holder</div>
-          <p class="product-desc">Grips any handle size, mounts without permanent fixings, stops the cupboard avalanche.</p>
-          <a href="YOUR-AFFILIATE-LINK-HERE" class="product-link" target="_blank" rel="nofollow sponsored">Shop this →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- DISCLOSURE -->
-<div class="disclosure">
-  ✦ &nbsp;This page contains affiliate links. If you click through and make a purchase, I may earn a small commission — at absolutely no extra cost to you. I only ever share things I'd genuinely recommend.&nbsp; ✦
-  <br><span style="font-size:0.65rem;opacity:0.7;">#ad #affiliate</span>
-</div>
-
-<!-- FOOTER -->
-<footer>
-  <span class="footer-script">The Tidy Magpie</span>
-  <p>© 2026 &nbsp;·&nbsp; <a href="https://www.pinterest.com" target="_blank">Follow on Pinterest ↗</a></p>
-  <div class="footer-hearts">✦ &nbsp; ✦ &nbsp; ✦</div>
-</footer>
-
 </body>
 </html>
