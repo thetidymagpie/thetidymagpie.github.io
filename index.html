@@ -38,26 +38,29 @@
     header {
       background-image: url('header.png');
       background-size: cover;
-      background-position: center right;
+      background-position: right top;
       border-bottom: 1px solid rgba(168,181,162,0.15);
       padding: 2.2rem 1.5rem 1.6rem;
-      text-align: center;
+      text-align: left;
       position: sticky;
       top: 0;
       z-index: 100;
-      position: relative;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
-    /* Soft cream overlay so text is always readable */
+    /* Gradient overlay — cream on left fading to transparent on right */
     header::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(247,243,236,0.55);
+      background: linear-gradient(to right, rgba(247,243,236,0.97) 45%, rgba(247,243,236,0.7) 65%, rgba(247,243,236,0.1) 100%);
       pointer-events: none;
     }
 
-    header > * { position: relative; z-index: 1; }
+    header > * { position: relative; z-index: 1; max-width: 55%; }
 
     .header-deco {
       font-family: 'Great Vibes', cursive;
@@ -92,7 +95,7 @@
     .header-rule {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 0.6rem;
       margin-bottom: 0.9rem;
       color: var(--sage-dark);
@@ -111,7 +114,7 @@
     nav {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: flex-start;
       gap: 0.2rem 0.8rem;
     }
 
