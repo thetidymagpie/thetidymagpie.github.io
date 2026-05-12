@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Tidy Magpie</title>
+<meta name="description" content="Curated home finds for beautiful, useful everyday living.">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{
+  --cream:#f7f4ef;
+  --white:#fffdfa;
+  --ink:#22201d;
+  --soft:#5e5750;
+  --muted:#7b746d;
+  --line:#ddd4c8;
+  --sage:#667751;
+  --gold:#bea06a;
+}
+
+body{
+  background:var(--cream);
+  font-family:'Inter',sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  line-height:1.7;
+}
+
+a{color:inherit;text-decoration:none}
+
+.page{background:linear-gradient(to bottom,#fffdfa 0%,#f7f4ef 100%)}
+
+/* TOP */
+
+.top{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:1.8rem 0 0.5rem;
+}
+
+.top-left{
+  font-size:0.68rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  line-height:1.8;
+}
+
+.top-right{
+  display:flex;
+  gap:1.7rem;
+  font-size:0.72rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+}
+
+/* HEADER */
+
+.header{
+  text-align:center;
+  padding:0.2rem 0 2rem;
+}
+
+.orchid-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:0.25rem;
+}
+
+.orchid-svg{
+  width:150px;
+  height:auto;
+  display:block;
+}
+
+.brand-small{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.4rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.7rem,3vw,2.5rem);
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  margin-bottom:0.3rem;
+}
+
+.brand-small:before,
+.brand-small:after{
+  content:"";
+  width:82px;
+  height:1px;
+  background:var(--line);
+}
+
+.brand-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(5rem,15vw,11rem);
+  line-height:0.82;
+  letter-spacing:0.09em;
+  font-weight:500;
+  text-transform:uppercase;
+  margin-bottom:1.25rem;
+}
+
+.magpie{
+  background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.brand-tag{
+  font-size:0.78rem;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+}
+
+/* NAV */
+
+nav{
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1050px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  padding:1rem 0;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+
+nav a{
+  font-size:0.74rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  padding-bottom:0.28rem;
+  border-bottom:1px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+  color:var(--sage);
+  border-color:var(--sage);
+}
+
+/* HERO */
+
+.hero{
+  border-bottom:1px solid rgba(221,212,200,0.7);
+}
+
+.hero-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  min-height:560px;
+}
+
+.hero-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-right:2rem;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.8rem,6vw,5rem);
+  line-height:1.14;
+  font-weight:500;
+  margin-bottom:1.4rem;
+  max-width:620px;
+}
+
+.hero p{
+  font-size:1rem;
+  color:var(--soft);
+  max-width:420px;
+  margin-bottom:2rem;
+}
+
+.cta{
+  display:inline-block;
+  width:fit-content;
+  font-size:0.78rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  padding-bottom:0.45rem;
+  border-bottom:1px solid var(--sage);
+  color:var(--sage);
+}
+
+/* SIMPLE STILL LIFE — NO EXTERNAL IMAGES */
+
+.hero-image{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(180deg,#fffdfa 0%,#f2ece3 100%);
+}
+
+.still-life{
+  width:min(430px,90%);
+  height:430px;
+  position:relative;
+}
+
+.branch{
+  position:absolute;
+  width:330px;
+  height:180px;
+  left:30px;
+  top:50px;
+}
+
+.stem{
+  position:absolute;
+  width:280px;
+  height:3px;
+  background:#667751;
+  top:95px;
+  left:8px;
+  transform:rotate(-15deg);
+  border-radius:4px;
+}
+
+.leaf{
+  position:absolute;
+  width:34px;
+  height:12px;
+  background:#667751;
+  border-radius:100% 0 100% 0;
+  opacity:.95;
+}
+
+.vase{
+  position:absolute;
+  width:130px;
+  height:150px;
+  right:78px;
+  bottom:62px;
+  background:linear-gradient(135deg,#f4eddf,#d7cbb9);
+  border-radius:45% 45% 28% 28%;
+  box-shadow:inset -16px -8px 24px rgba(60,45,30,.08);
+}
+
+.vase:before{
+  content:"";
+  position:absolute;
+  width:60px;
+  height:26px;
+  border-radius:50%;
+  background:#e5dac9;
+  left:35px;
+  top:-10px;
+}
+
+.candle{
+  position:absolute;
+  width:78px;
+  height:80px;
+  left:85px;
+  bottom:55px;
+  background:linear-gradient(90deg,#eadfce,#cfc0ac);
+  border-radius:8px 8px 18px 18px;
+}
+
+.candle:before{
+  content:"";
+  position:absolute;
+  width:78px;
+  height:18px;
+  left:0;
+  top:-9px;
+  background:#eee5d6;
+  border-radius:50%;
+}
+
+.flame{
+  position:absolute;
+  width:12px;
+  height:21px;
+  left:118px;
+  bottom:131px;
+  background:#c99442;
+  border-radius:60%;
+}
+
+.dish{
+  position:absolute;
+  width:180px;
+  height:42px;
+  right:35px;
+  bottom:42px;
+  background:linear-gradient(180deg,#eee4d4,#cfc2af);
+  border-radius:50%;
+}
+
+/* COLLECTIONS */
+
+.collections{
+  width:min(1180px,92%);
+  margin:auto;
+  padding:3.7rem 0 2.8rem;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:1.3rem;
+  align-items:center;
+  margin-bottom:1.8rem;
+}
+
+.row h2{
+  font-size:0.82rem;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  font-weight:500;
+}
+
+.line{height:1px;background:var(--line)}
+
+.row a{
+  font-size:0.72rem;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--sage);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
+
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  overflow:hidden;
+  min-width:0;
+}
+
+
+
+.card-img{
+  aspect-ratio:1/0.95;
+  background:#e9e2d8;
+}
+
+
+
+.card-img.kitchen{background:linear-gradient(135deg,#e8ded0,#fffdfa 45%,#b99564)}
+.card-img.storage{background:radial-gradient(circle at 50% 48%,#c49c5f 0 25%,transparent 26%),linear-gradient(135deg,#f5eee4,#c6ad8b)}
+.card-img.gifts{background:linear-gradient(135deg,transparent 45%,rgba(37,73,50,.28) 45% 52%,transparent 52%),linear-gradient(45deg,transparent 43%,rgba(37,73,50,.28) 43% 50%,transparent 50%),#eee3d6}
+.card-img.pinterest{background:radial-gradient(circle at 66% 25%,#f1f0df 0 12%,transparent 13%),radial-gradient(circle at 48% 44%,#d6ceb5 0 18%,transparent 19%),linear-gradient(160deg,#f7f1e8,#d8cbb9)}
+
+.card-footer{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:0.45rem;
+  min-height:118px;
+  padding:1.2rem 1.25rem;
+  border-top:1px solid var(--line);
+  font-size:0.78rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+}
+
+
+
+.card-footer span:last-child{
+  font-size:1.1rem;
+  letter-spacing:0;
+  color:var(--sage);
+}
+
+/* STRIP */
+
+.strip{
+  width:min(1180px,92%);
+  margin:0 auto 3rem;
+  background:linear-gradient(135deg,#f2ece2,#fffdfa);
+  border:1px solid var(--line);
+  display:grid;
+  grid-template-columns:120px 1fr auto;
+  gap:1rem;
+  align-items:center;
+  padding:2rem;
+}
+
+.strip-mark{
+  font-size:2.3rem;
+  color:var(--gold);
+  text-align:center;
+  font-family:'Cormorant Garamond',serif;
+}
+
+.strip p{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,2vw,1.7rem);
+  line-height:1.45;
+  color:var(--soft);
+}
+
+.strip a{
+  border:1px solid var(--sage);
+  padding:0.9rem 1.5rem;
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--sage);
+}
+
+.disclosure{
+  width:min(860px,92%);
+  margin:auto;
+  text-align:center;
+  padding:1.5rem 0 2.3rem;
+  font-size:0.82rem;
+  color:var(--muted);
+}
+
+footer{
+  background:var(--sage);
+  color:#f8f5ef;
+  padding:1.3rem 0;
+  font-size:0.72rem;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-copy{padding:4rem 0 2rem;text-align:center;align-items:center}
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
+  .strip{grid-template-columns:1fr;text-align:center}
+  .top{flex-direction:column;align-items:center;gap:1rem;text-align:center}
+}
+
+@media(max-width:560px){
+  .brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:0.04em}
+  .brand-small:before,.brand-small:after{width:40px}
+  .nav-inner{justify-content:center}
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1.5rem;
+  align-items:stretch;
+}
+  .row{grid-template-columns:1fr}
+  .line{display:none}
+  .footer-inner{flex-direction:column;gap:0.5rem;text-align:center}
+}
+</style>
+</head>
+
+<body>
+<div class="page">
+
+  <div class="top">
+    <div class="top-left">Curated home finds for<br>beautiful, useful everyday living.</div>
+    <div class="top-right">
+      <a href="#">Pinterest</a>
+      <a href="#">Journal</a>
+      <a href="#">Email</a>
+    </div>
+  </div>
+
+  <header class="header">
+    
+<div class="orchid-wrap">
+      <svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none"
+           stroke="#BEA06A"
+           stroke-width="4"
+           stroke-linecap="round"
+           stroke-linejoin="round">
+
+          <!-- large top petal -->
+          <path d="M120 10
+                   C92 39 88 80 120 111
+                   C152 80 148 39 120 10Z"/>
+
+          <!-- large left petal -->
+          <path d="M116 108
+                   C82 77 36 80 16 129
+                   C57 151 99 139 116 108Z"/>
+
+          <!-- large right petal -->
+          <path d="M124 108
+                   C158 77 204 80 224 129
+                   C183 151 141 139 124 108Z"/>
+
+          <!-- lower lip -->
+          <path d="M120 109
+                   C96 122 96 148 120 164
+                   C144 148 144 122 120 109Z"/>
+
+          <!-- centre folds -->
+          <path d="M120 103
+                   C111 112 107 127 112 140"/>
+          <path d="M120 103
+                   C129 112 133 127 128 140"/>
+          <path d="M112 116
+                   C105 120 103 130 108 139"/>
+          <path d="M128 116
+                   C135 120 137 130 132 139"/>
+          <path d="M120 112
+                   C116 124 116 137 120 149
+                   C124 137 124 124 120 112Z"/>
+          <path d="M108 139
+                   C114 151 126 151 132 139"/>
+
+        </g>
+      </svg>
+    </div>
+
+
+    <div class="brand-small">The Tidy</div>
+
+    <div class="brand-title">
+      <span class="magpie">Magpie</span>
+    </div>
+
+    <div class="brand-tag">
+      A quieter way to find beautiful, useful things for the home.
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="active" href="#">Home</a>
+      <a href="#">Kitchen</a>
+      <a href="#">Storage & Organisation</a>
+      <a href="#">Gifts</a>
+      <a href="#">Pinterest</a>
+      <a href="#">Journal</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>My philosophy is simple — things should be beautiful and useful.</h1>
+        <p>They have to be one or the other, but ultimately they should be both.</p>
+        <a href="#" class="cta">Explore the collection →</a>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <div class="still-life">
+          <div class="branch">
+            <div class="stem"></div>
+            <span class="leaf" style="left:54px;top:54px;transform:rotate(-55deg);"></span>
+            <span class="leaf" style="left:78px;top:78px;transform:rotate(32deg);"></span>
+            <span class="leaf" style="left:108px;top:47px;transform:rotate(-48deg);"></span>
+            <span class="leaf" style="left:132px;top:74px;transform:rotate(31deg);"></span>
+            <span class="leaf" style="left:162px;top:40px;transform:rotate(-42deg);"></span>
+            <span class="leaf" style="left:188px;top:66px;transform:rotate(28deg);"></span>
+            <span class="leaf" style="left:222px;top:35px;transform:rotate(-38deg);"></span>
+            <span class="leaf" style="left:246px;top:62px;transform:rotate(22deg);"></span>
+          </div>
+          <div class="vase"></div>
+          <div class="candle"></div>
+          <div class="flame"></div>
+          <div class="dish"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="collections">
+    <div class="row">
+      <h2>Curated collections</h2>
+      <div class="line"></div>
+      <a href="#">View all collections →</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-img kitchen"></div>
+        <div class="card-footer"><span>Kitchen</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img storage"></div>
+        <div class="card-footer"><span>Storage & Organisation</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img gifts"></div>
+        <div class="card-footer"><span>Gifts</span><span>→</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-img pinterest"></div>
+        <div class="card-footer"><span>Pinterest</span><span>→</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="strip-mark">⌁</div>
+    <p>
+      Living beautifully isn’t about having more.<br>
+      It’s about choosing well and valuing what lasts.<br>
+      That’s the heart of what we share.
+    </p>
+    <a href="#">Read the journal →</a>
+  </section>
+
+  <div class="disclosure">
+    Some links on this site may be affiliate links. If you choose to buy something through them, I may earn a small commission at no extra cost to you.
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div>About | Contact | Privacy</div>
+      <div>© The Tidy Magpie</div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
