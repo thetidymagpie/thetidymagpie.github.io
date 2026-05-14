@@ -1,11 +1,1 @@
-READY TO UPLOAD
-
-Upload every file in this folder into the same GitHub folder as your website.
-
-This version changes the homepage so the Home, Bathroom, Kitchen and Garden sections are image sliders.
-
-Clicking a slider image opens the matching journal/shop-the-look page with the picture, writing and product links.
-
-The small headings above article titles have been removed from the pages.
-
-Keep your existing orchid-bathroom.png file in GitHub if it is already there.
+Upload all files in this folder to the same GitHub repository folder as your current index.html. This update uses Living Spaces as the home-style category and moves the slider arrows up near the “Use arrows to browse” text so they are easier to see.
