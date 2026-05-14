@@ -1,5 +1,8 @@
-Upload these files into the same GitHub folder as your website.
+Upload all files in this zip into the same GitHub folder as your current website files.
 
-This update turns the homepage into a photo gallery. Each photo links to its journal article and suggested buys section.
+This update adds:
+- entryway-home-look.html
+- entryway-home-look.png
+- an updated home-journal.html with a Home Gallery card linking to the new entryway look
 
-Important: the Bathroom card uses orchid-bathroom.png. Keep your existing orchid-bathroom.png file in the same folder.
+Your product cards already contain the Amazon affiliate links you supplied.
