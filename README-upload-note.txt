@@ -1,13 +1,11 @@
-Upload all files in this zip into the same GitHub folder as your current website files.
+READY TO UPLOAD
 
-This update changes HOME into a proper gallery page:
+Upload every file in this folder into the same GitHub folder as your website.
 
-Homepage Home card → home-journal.html
-home-journal.html → gallery of Home looks
-Click an image → individual look page with words and product suggestions
+This version changes the homepage so the Home, Bathroom, Kitchen and Garden sections are image sliders.
 
-Included now:
-- home-journal.html updated into Home Gallery
-- entryway-home-look.html with your Amazon affiliate links
-- calm-living-room-look.html as the living room look page
-- all supporting images and existing pages
+Clicking a slider image opens the matching journal/shop-the-look page with the picture, writing and product links.
+
+The small headings above article titles have been removed from the pages.
+
+Keep your existing orchid-bathroom.png file in GitHub if it is already there.
