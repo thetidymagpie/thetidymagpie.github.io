@@ -1,1 +1,1 @@
-Upload all files in this zip to the same GitHub folder as your index.html. Replace existing files when asked. This update adds the new plant-filled bathroom look to the Bathroom slider, with the image and affiliate links on its own page.
+Upload every file in this folder to the same GitHub folder. Replace existing files when asked. This version changes the site from one long scrolling page into separate pages for Home, Living Spaces, Bathroom, Kitchen, Garden and Journal, while keeping the same header and menu styling.
