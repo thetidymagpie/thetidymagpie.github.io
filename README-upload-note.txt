@@ -1,1 +1,1 @@
-Upload all files in this folder to the same GitHub repository folder as your current index.html. This update uses Living Spaces as the home-style category and moves the slider arrows up near the “Use arrows to browse” text so they are easier to see.
+Upload all files in this zip to the same GitHub folder as your index.html. Replace existing files when asked. This update adds the new plant-filled bathroom look to the Bathroom slider, with the image and affiliate links on its own page.
