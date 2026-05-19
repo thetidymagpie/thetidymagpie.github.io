@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Fresh French Summer Kitchen | The Tidy Magpie</title><meta name="description" content="A soft, sunlit kitchen look inspired by the ease of a French summer home — wooden serving pieces, wildflower napkins and simple cream ceramics."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root{--cream:#f7f4ef;--white:#fffdfa;--ink:#22201d;--soft:#5e5750;--muted:#7b746d;--line:#ddd4c8;--sage:#667751;--gold:#bea06a;}
+
+body{background:linear-gradient(to bottom,#fffdfa 0%,#f7f4ef 100%);font-family:'Inter',sans-serif;font-weight:300;color:var(--ink);line-height:1.8;}
+
+a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1.8rem 0 .5rem}.top-left{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}.header{text-align:center;padding:.2rem 0 2rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:.25rem}.orchid-svg{width:150px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.4rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.3rem}.brand-small:before,.brand-small:after{content:"";width:82px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,15vw,11rem);line-height:.82;letter-spacing:.09em;font-weight:500;text-transform:uppercase;margin-bottom:1.25rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase}nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,253,250,.92);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:1rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
+
+.article-wrap{width:min(860px,92%);margin:0 auto;padding:4rem 0 4.5rem}h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.2rem);line-height:1.05;font-weight:500;text-align:center;margin-bottom:1.8rem}.intro{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.45rem);line-height:1.6;color:var(--soft);text-align:center;max-width:700px;margin:0 auto 3rem}.article{background:var(--white);border:1px solid var(--line);padding:clamp(1.5rem,4vw,3rem)}.article p{margin-bottom:1.35rem;color:var(--soft);font-size:1rem;line-height:1.85}.article p:last-of-type{margin-bottom:0}
+
+.shop-box{margin-top:2.8rem;padding:2rem 2rem 2.2rem;background:#f7f2ea;border:1px solid var(--line)}.shop-box h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,2.5vw,2.1rem);font-weight:500;margin:0 0 .4rem}.ad{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:1.6rem!important;margin-top:.2rem!important}.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.product-card{display:block;background:var(--white);border:1px solid var(--line);padding:1.2rem 1.3rem;transition:transform .2s ease,border-color .2s ease}.product-card:hover{transform:translateY(-2px);border-color:var(--sage)}.product-card span{display:block;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);font-weight:500;margin-bottom:.45rem}.product-card small{display:block;font-size:.9rem;line-height:1.55;color:var(--soft)}.product-card .arrow{display:inline-block;margin-top:.6rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage)}
+
+.journal-image{margin:0 0 3rem;border:1px solid var(--line);background:var(--white);padding:.7rem}.journal-image img{width:100%;display:block;height:auto}
+
+.back-link{display:inline-block;margin-top:2.4rem;font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage)}
+
+.disclosure{width:min(860px,92%);margin:auto;text-align:center;padding:1.5rem 0 2.3rem;font-size:.82rem;color:var(--muted)}footer{background:var(--sage);color:#f8f5ef;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
+
+@media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
+
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.product-grid{grid-template-columns:1fr}}
+
+</style></head><body><div class="page">
+
+<div class="top"><div class="top-left">Curated home finds for<br>beautiful, useful everyday living.</div><div class="top-right"><a href="https://www.pinterest.com/thetidymagpie/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="journal.html">Journal</a><a href="mailto:hello@thetidymagpie.com">Email</a></div></div>
+
+<header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div></header>
+
+<nav><div class="nav-inner"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a class="active" href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="journal.html">Journal</a></div></nav>
+
+<main class="article-wrap">
+
+  <h1>Fresh French Summer Kitchen</h1>
+  <p class="intro">A soft, sunlit kitchen look inspired by the ease of a French summer home — warm wooden pieces, wildflower napkins and simple cream ceramics that make even a simple lunch feel special.</p>
+
+  <div class="journal-image"><img src="ChatGPT_Image_May_19__2026_at_10_45_47_AM.png" alt="Sunlit kitchen table set for a relaxed summer lunch with wooden bowl, wildflower napkins, cream ceramics and stacking tumblers"></div>
+
+  <article class="article">
+    <p>A soft, sunlit kitchen scene inspired by the ease of a French summer home — the kind of room where the windows are open, the table is gently pulled together, and lunch feels unhurried. Warm wooden serving pieces sit alongside delicate wildflower napkins, simple cream ceramics and textured glassware that catches the afternoon light.</p>
+    <p>There's something lovely about this mix: rustic without feeling heavy, pretty without feeling overly styled. A generous wooden salad bowl, fresh herbs, bread on the board, little serving bowls and easy everyday pieces all work together to create that relaxed, gathered-at-the-table feeling.</p>
+    <p>It's a look built around texture, softness and usefulness — the warmth of acacia wood, the charm of meadow florals, the simplicity of cream ceramic and the sparkle of clear glass. Everything feels practical enough for everyday meals, but still beautiful enough to make a simple summer lunch feel special.</p>
+    <p>Perfect for bringing a little French country ease into the kitchen: calm, fresh, natural and quietly inviting.</p>
+
+    <div class="shop-box">
+      <h2>Shop the Look</h2>
+      <p class="ad">Some links are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
+      <div class="product-grid">
+
+        <a class="product-card" href="https://amzn.to/49ETU1E" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Decorative mango wood serving bowls</span>
+          <small>Beautiful small bowls for herbs, tomatoes or little side servings — warm, natural wood with real character.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/4dsAI8s" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Large wooden salad bowl with servers</span>
+          <small>The anchor of this whole look — a generous, deep salad bowl with wooden servers, the kind that gets better with use.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/4tNMi4n" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Round acacia wooden plates</span>
+          <small>Warm, stackable acacia plates that work beautifully for relaxed dining — sturdy, natural and quietly lovely.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/3RhmXSF" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Wildflower meadow paper napkins</span>
+          <small>Delicate meadow florals in soft pinks and greens — the detail that pulls the whole table together effortlessly.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/4dfGhby" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Acacia-handled butter knives</span>
+          <small>Simple, warm-handled butter knives that feel right at home on a relaxed summer table.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/4wJjQDs" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Cream ceramic butter dish</span>
+          <small>Quietly elegant and entirely practical — a plain cream butter dish that belongs on every kitchen table.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+        <a class="product-card" href="https://amzn.to/4wE9x3l" target="_blank" rel="noopener noreferrer sponsored">
+          <span>Textured glass tumblers and bottle set</span>
+          <small>Stackable pressed glass tumblers and a matching bottle — the kind you buy for best and end up using every day.</small>
+          <div class="arrow">Shop on Amazon →</div>
+        </a>
+
+      </div>
+    </div>
+
+    <a class="back-link" href="kitchen.html">← Back to Kitchen</a>
+  </article>
+
+</main>
+
+<footer><div class="footer-inner"><div><a href="journal.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer>
+
+</div></body></html>
