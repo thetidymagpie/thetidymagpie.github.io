@@ -23,6 +23,10 @@ a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px
 .journal-card p{font-size:.95rem;color:var(--soft);line-height:1.75;margin-bottom:1.2rem}
 .journal-card .read-more{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem}
 
+/* PINNED CARD — always first, do not move */
+.journal-card.pinned{border-color:var(--gold);border-width:1px}
+.journal-card.pinned .journal-card-label::before{content:"— ";color:var(--gold)}
+
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
@@ -44,6 +48,17 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
   <div class="journal-content">
 
+    <!-- PINNED — always keep this card first -->
+    <a class="journal-card pinned" href="beautiful-and-useful.html">
+      <img src="images/beautiful-and-useful.png" alt="Calm styled home details chosen to be both beautiful and useful">
+      <div class="journal-card-label">On the home</div>
+      <h2>Beautiful and Useful</h2>
+      <p>Why everyday things deserve to be both practical and lovely — and what happens when they are.</p>
+      <span class="read-more">Read →</span>
+    </a>
+
+    <!-- Add new articles below this line -->
+
     <a class="journal-card" href="italian-villa-bedroom-journal.html">
       <img src="images/italianbedmornwhite2.png" alt="A soft white bedroom with linen bedding, natural light through painted shutters and green plants">
       <div class="journal-card-label">On the home · Bedroom</div>
@@ -52,7 +67,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
       <span class="read-more">Read →</span>
     </a>
 
-        <a class="journal-card" href="japandi-bedroom-journal.html">
+    <a class="journal-card" href="japandi-bedroom-journal.html">
       <img src="images/bamboobed.png" alt="A Japandi-style bedroom with low platform bed, dark floorboards, tall bamboo plants and soft linen bedding">
       <div class="journal-card-label">On the home · Bedroom</div>
       <h2>Why Japandi Bedrooms Feel So Calming</h2>
@@ -60,19 +75,11 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
       <span class="read-more">Read →</span>
     </a>
 
-        <a class="journal-card" href="spa-bathroom.html">
+    <a class="journal-card" href="spa-bathroom.html">
       <img src="images/spa-bathroom-hero.jpg" alt="A calm modern bathroom with a freestanding white bath, warm stone tones and soft lighting">
       <div class="journal-card-label">On the home · Bathroom</div>
       <h2>Future Spa Bathroom Ideas for a Calm Modern Home</h2>
       <p>Less cold minimalism, more warmth and atmosphere — why the most luxurious bathrooms are often the simplest, and the pieces that help create that feeling.</p>
-      <span class="read-more">Read →</span>
-    </a>
-
-    <a class="journal-card" href="beautiful-and-useful.html">
-      <img src="images/beautiful-and-useful.png" alt="Calm styled home details chosen to be both beautiful and useful">
-      <div class="journal-card-label">On the home</div>
-      <h2>Beautiful and Useful</h2>
-      <p>Why everyday things deserve to be both practical and lovely — and what happens when they are.</p>
       <span class="read-more">Read →</span>
     </a>
 
