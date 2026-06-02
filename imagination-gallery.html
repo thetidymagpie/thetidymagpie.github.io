@@ -11,19 +11,96 @@ nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);backgro
 .gallery-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5rem);font-weight:500;line-height:1.05;margin-bottom:.8rem}
 .gallery-hero p{font-size:.84rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;max-width:600px;margin:0 auto}
 
-.gallery-grid{width:min(1180px,92%);margin:3rem auto 5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+/* Grid — always 2 columns */
+.gallery-grid{
+  width:min(1180px,92%);
+  margin:3rem auto 5rem;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1.5rem;
+}
 
-.gallery-card{background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,border-color .2s ease}
-.gallery-card:hover{transform:translateY(-3px);border-color:var(--gold)}
-.gallery-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
-.gallery-card-body{padding:1.4rem 1.5rem 1.6rem}
-.gallery-card-body h2{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;color:var(--ink);margin-bottom:.4rem;line-height:1.2}
-.gallery-card-body p{font-size:.88rem;color:var(--soft);line-height:1.7}
+/* Card — image only, no text shown */
+.gallery-card{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  border:1px solid var(--line);
+  background:var(--white);
+  transition:border-color .2s ease,transform .2s ease;
+}
+.gallery-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.gallery-card img{
+  width:100%;
+  display:block;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  transition:transform .35s ease;
+}
+.gallery-card:hover img{transform:scale(1.03)}
+
+/* Lightbox overlay */
+.lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:200;
+  background:rgba(20,16,13,.88);
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+  cursor:zoom-out;
+}
+.lightbox.open{display:flex}
+.lightbox-inner{
+  position:relative;
+  max-width:900px;
+  width:100%;
+  cursor:default;
+}
+.lightbox-inner img{
+  width:100%;
+  max-height:82vh;
+  object-fit:contain;
+  display:block;
+}
+.lightbox-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  font-weight:400;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:#f2e9dc;
+  text-align:center;
+  margin-top:.9rem;
+  opacity:.85;
+}
+.lightbox-close{
+  position:absolute;
+  top:-1.4rem;
+  right:0;
+  font-size:1.4rem;
+  color:#f2e9dc;
+  background:none;
+  border:none;
+  cursor:pointer;
+  line-height:1;
+  opacity:.7;
+  transition:opacity .15s;
+}
+.lightbox-close:hover{opacity:1}
 
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
-@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.gallery-grid{grid-template-columns:1fr}.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}}
+@media(max-width:600px){
+  .gallery-grid{grid-template-columns:1fr}
+  .top{flex-direction:column;align-items:center;gap:1rem;text-align:center}
+  .top-right{flex-wrap:wrap;justify-content:center}
+  .brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}
+  .brand-small:before,.brand-small:after{width:40px}
+  .nav-inner{justify-content:center}
+  .footer-inner{flex-direction:column;gap:.5rem;text-align:center}
+}
 
 </style></head><body><div class="page">
 
@@ -41,26 +118,45 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
   <div class="gallery-grid">
 
-    <div class="gallery-card">
+    <div class="gallery-card" data-title="The Curved Oak Sanctuary" onclick="openLightbox(this)">
       <img src="images/curvedoak.png" alt="A futuristic Japandi bedroom with curved oak arches, trailing plants and a forest view">
-      <div class="gallery-card-body">
-        <h2>The Curved Oak Sanctuary</h2>
-        <p>A bedroom built inside warm curved oak arches, surrounded by trailing greenery and looking straight out into a forest. Japandi calm taken somewhere completely otherworldly.</p>
-      </div>
     </div>
 
-    <div class="gallery-card">
+    <div class="gallery-card" data-title="Concrete and Silence" onclick="openLightbox(this)">
       <img src="images/concreteheaven.png" alt="A minimalist concrete bedroom with a canopy bed, sheer white drapes and Chinese ink prints">
-      <div class="gallery-card-body">
-        <h2>Concrete and Silence</h2>
-        <p>Raw concrete walls, a low canopy bed with sheer white drapes pooling on the floor, and Chinese ink paintings against the stone. A room that demands almost nothing and offers complete stillness.</p>
-      </div>
     </div>
-
 
   </div>
 </main>
 
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" onclick="closeLightbox(null)" aria-label="Close">✕</button>
+    <img id="lightbox-img" src="" alt="">
+    <div class="lightbox-title" id="lightbox-title"></div>
+  </div>
+</div>
+
 <footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer>
 
-</div></body></html>
+</div>
+
+<script>
+function openLightbox(card){
+  const img = card.querySelector('img');
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-img').alt = img.alt;
+  document.getElementById('lightbox-title').textContent = card.dataset.title;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e){
+  if(e && e.target !== document.getElementById('lightbox')) return;
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(null); });
+</script>
+
+</body></html>
