@@ -2,12 +2,10 @@
 <html lang="en"><head><meta charset="UTF-8"><meta name="p:domain_verify" content="17d663c3d8e2cb99af8f2dd904e51e92"/><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Journal | The Tidy Magpie</title><meta name="description" content="Notes on the home — calm spaces, thoughtful choices and things worth thinking about."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><style>
 
 *{margin:0;padding:0;box-sizing:border-box}
-
 :root{--cream:#f8f2e8;--white:#fdf8f1;--ink:#2c2722;--soft:#625950;--muted:#80766d;--line:#e4d8c9;--sage:#6f7a5e;--gold:#c3a67a;}
-
 body{background:linear-gradient(to bottom,#f8f2e9 0%,#f2e9dc 100%);font-family:'Inter',sans-serif;font-weight:300;color:var(--ink);line-height:1.8;}
-
-a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1.8rem 0 .5rem}.top-left{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}.header{text-align:center;padding:.2rem 0 2rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:.25rem}.orchid-svg{width:150px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.4rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.3rem}.brand-small:before,.brand-small:after{content:"";width:82px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,15vw,11rem);line-height:.82;letter-spacing:.09em;font-weight:600;text-transform:uppercase;margin-bottom:1.25rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase}nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(252,246,238,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:1rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
+a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1.8rem 0 .5rem}.top-left{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}.header{text-align:center;padding:.2rem 0 2rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:.25rem}.orchid-svg{width:150px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.4rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.3rem}.brand-small:before,.brand-small:after{content:"";width:82px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,15vw,11rem);line-height:.82;letter-spacing:.09em;font-weight:600;text-transform:uppercase;margin-bottom:1.25rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase}
+nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(252,246,238,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:1rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
 
 /* Pinterest landing */
 .pinterest-bar{display:none;position:sticky;top:0;z-index:20;background:rgba(252,246,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);padding:.75rem min(4%,1.5rem);align-items:center;justify-content:space-between}
@@ -34,24 +32,29 @@ body.pinterest-landing .pinterest-products{display:block}
 .journal-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5rem);line-height:1.05;font-weight:500;margin-bottom:1rem}
 .journal-hero p{font-size:.84rem;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}
 
-.journal-content{width:min(780px,92%);margin:0 auto;padding:2rem 0 5rem}
+.journal-content{width:min(1180px,92%);margin:0 auto;padding:2rem 0 5rem}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
 
-.journal-card{display:block;background:var(--white);border:1px solid var(--line);padding:2.2rem 2.5rem;margin-bottom:1.2rem;transition:transform .2s ease,border-color .2s ease}
+.journal-card{display:block;background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,border-color .2s ease}
 .journal-card:hover{transform:translateY(-2px);border-color:var(--sage)}
-.journal-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;margin:-.6rem 0 1.4rem;border:1px solid var(--line)}
+.journal-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.journal-card-body{padding:1.2rem 1.25rem}
 .journal-card-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.6rem}
-.journal-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.5rem,3vw,2.1rem);font-weight:500;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
-.journal-card p{font-size:.95rem;color:var(--soft);line-height:1.75;margin-bottom:1.2rem}
+.journal-card h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.1rem,2vw,1.45rem);font-weight:500;line-height:1.2;margin-bottom:.6rem;color:var(--ink)}
+.journal-card p{font-size:.88rem;color:var(--soft);line-height:1.7;margin-bottom:1rem}
 .journal-card .read-more{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem}
 
-/* PINNED CARD — always first, do not move */
-.journal-card.pinned{border-color:var(--gold);border-width:1px}
+/* PINNED CARD — spans full width, always first */
+.journal-card.pinned{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;border-color:var(--gold)}
+.journal-card.pinned img{aspect-ratio:3/2;height:100%;object-fit:cover}
+.journal-card.pinned .journal-card-body{padding:2rem 2.2rem;display:flex;flex-direction:column;justify-content:center}
+.journal-card.pinned h2{font-size:clamp(1.6rem,3vw,2.4rem)}
 .journal-card.pinned .journal-card-label::before{content:"— ";color:var(--gold)}
 
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
-@media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.journal-card{padding:1.5rem}}
+@media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}.journal-grid{grid-template-columns:repeat(2,1fr)}.journal-card.pinned{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.journal-grid{grid-template-columns:1fr}.journal-card.pinned{grid-column:auto}}
 
 </style></head><body><div class="page">
 
@@ -70,179 +73,216 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 <div class="pinterest-nav-panel" id="pinterestNav">
   <a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a href="journal.html">Journal</a><a href="about.html">About</a>
 </div>
-<!-- Pinterest product strip: paste this page's cards inside the card-grid div below -->
 <div class="pinterest-products" id="pinterestProducts">
   <p class="pp-label">Shop this article</p>
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
-  <div class="card-grid">
-    <!-- PASTE THIS PAGE'S PRODUCT CARDS HERE -->
-  </div>
+  <div class="card-grid"><!-- PASTE THIS PAGE'S PRODUCT CARDS HERE --></div>
   <div class="pp-divider"></div>
 </div>
 
 <main>
   <div class="journal-hero">
     <h1>Journal</h1>
-    <p>Notes on the home & things worth thinking about.</p>
+    <p>Notes on the home. No agenda, just things worth thinking about.</p>
   </div>
 
   <div class="journal-content">
+    <div class="journal-grid">
 
-    <!-- PINNED — always keep this card first -->
-    <a class="journal-card pinned" href="beautiful-and-useful.html">
-      <img src="images/beautiful-and-useful.png" alt="Calm styled home details chosen to be both beautiful and useful">
-      <div class="journal-card-label">On the home</div>
-      <h2>Beautiful and Useful</h2>
-      <p>Why everyday things deserve to be both practical and lovely — and what happens when they are.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <!-- PINNED — always keep this card first -->
+      <a class="journal-card pinned" href="beautiful-and-useful.html">
+        <img src="images/beautiful-and-useful.png" alt="Calm styled home details chosen to be both beautiful and useful">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home</div>
+          <h2>Beautiful and Useful</h2>
+          <p>Why everyday things deserve to be both practical and lovely — and what happens when they are.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <!-- Add new articles below this line -->
+      <!-- Add new articles below this line -->
 
-    <a class="journal-card" href="why-lighting-matters.html">
-      <img src="images/why-lighting-matters.png" alt="A warmly lit living room in the evening with layered table lamps, soft shadows and glowing pools of warm light">
-      <div class="journal-card-label">On the home · Lighting</div>
-      <h2>Why Lighting Matters More Than Almost Anything Else In A Home</h2>
-      <p>Lighting changes the feeling of a home more than almost anything else — and it is often the last thing people think to change. On layered light, warm bulbs and why good lighting quietly makes everything else look more beautiful.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="why-lighting-matters.html">
+        <img src="images/why-lighting-matters.png" alt="A warmly lit living room in the evening with layered table lamps, soft shadows and glowing pools of warm light">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Lighting</div>
+          <h2>Why Lighting Matters More Than Almost Anything Else In A Home</h2>
+          <p>Lighting changes the feeling of a home more than almost anything else — and it is often the last thing people think to change.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="cast-iron-worth-keeping.html">
-      <img src="images/cast-iron-worth-keeping.png" alt="Cream Le Creuset casserole dish on an Aga range in a warm country kitchen with wooden shelves, herb pots and linen tea towels">
-      <div class="journal-card-label">On the home · Kitchen</div>
-      <h2>Why Cast Iron Cookware Always Feels Worth Keeping</h2>
-      <p>A good cast iron casserole dish is one of those rare kitchen pieces that seems to get better the longer it stays in a home. On permanence, warmth, and the things worth keeping.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="cast-iron-worth-keeping.html">
+        <img src="images/cast-iron-worth-keeping.png" alt="Cream Le Creuset casserole dish on an Aga range in a warm country kitchen with wooden shelves, herb pots and linen tea towels">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Kitchen</div>
+          <h2>Why Cast Iron Cookware Always Feels Worth Keeping</h2>
+          <p>A good cast iron casserole dish is one of those rare kitchen pieces that seems to get better the longer it stays in a home.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="glass-storage-jars-calmer-kitchens.html">
-      <img src="images/glass-storage-jars-calmer-kitchens.png" alt="Glass storage jars with wooden lids on open kitchen shelving with dried ingredients, warm morning light and natural textures">
-      <div class="journal-card-label">On the home · Kitchen</div>
-      <h2>Why Glass Storage Jars Make Kitchens Feel Calmer</h2>
-      <p>Good storage changes the atmosphere of a kitchen far more than people expect. On glass jars, visual calm, and the simplest way to make a kitchen feel more intentional.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="glass-storage-jars-calmer-kitchens.html">
+        <img src="images/glass-storage-jars-calmer-kitchens.png" alt="Glass storage jars with wooden lids on open kitchen shelving with dried ingredients, warm morning light and natural textures">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Kitchen</div>
+          <h2>Why Glass Storage Jars Make Kitchens Feel Calmer</h2>
+          <p>Good storage changes the atmosphere of a kitchen far more than people expect.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="outdoor-rooms-journal.html">
-      <img src="images/outdoor-garden-journal.png" alt="A beautiful outdoor room with natural materials, soft lighting and a table set for gathering in the garden">
-      <div class="journal-card-label">On the home · Garden</div>
-      <h2>Why Outdoor Rooms Feel So Luxurious</h2>
-      <p>A table beneath trees, lanterns glowing in the evening, natural materials that weather beautifully over time — why even a small garden changes the feeling of a home almost immediately.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="outdoor-rooms-journal.html">
+        <img src="images/outdoor-garden-journal.png" alt="A beautiful outdoor room with natural materials, soft lighting and a table set for gathering in the garden">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Garden</div>
+          <h2>Why Outdoor Rooms Feel So Luxurious</h2>
+          <p>A table beneath trees, lanterns glowing in the evening, natural materials that weather beautifully over time.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="italian-villa-bedroom-journal.html">
-      <img src="images/italianbedmornwhite2.png" alt="A soft white bedroom with linen bedding, natural light through painted shutters and green plants">
-      <div class="journal-card-label">On the home · Bedroom</div>
-      <h2>Soft White Bedroom Ideas That Feel Like an Italian Villa</h2>
-      <p>Soft light, natural textures, rumpled linen and a little bit of quiet — how to create a bedroom with the effortless calm of a Mediterranean villa.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="italian-villa-bedroom-journal.html">
+        <img src="images/italianbedmornwhite2.png" alt="A soft white bedroom with linen bedding, natural light through painted shutters and green plants">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Bedroom</div>
+          <h2>Soft White Bedroom Ideas That Feel Like an Italian Villa</h2>
+          <p>Soft light, natural textures, rumpled linen and a little bit of quiet.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="japandi-bedroom-journal.html">
-      <img src="images/bamboobed.png" alt="A Japandi-style bedroom with low platform bed, dark floorboards, tall bamboo plants and soft linen bedding">
-      <div class="journal-card-label">On the home · Bedroom</div>
-      <h2>Why Japandi Bedrooms Feel So Calming</h2>
-      <p>Japandi style combines Japanese simplicity with Scandinavian warmth — and the result is a bedroom that feels genuinely restful rather than just photographed well.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="japandi-bedroom-journal.html">
+        <img src="images/bamboobed.png" alt="A Japandi-style bedroom with low platform bed, dark floorboards, tall bamboo plants and soft linen bedding">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Bedroom</div>
+          <h2>Why Japandi Bedrooms Feel So Calming</h2>
+          <p>Japandi style combines Japanese simplicity with Scandinavian warmth — and the result is a bedroom that feels genuinely restful.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="spa-bathroom.html">
-      <img src="images/spa-bathroom-hero.jpg" alt="A calm modern bathroom with a freestanding white bath, warm stone tones and soft lighting">
-      <div class="journal-card-label">On the home · Bathroom</div>
-      <h2>Future Spa Bathroom Ideas for a Calm Modern Home</h2>
-      <p>Less cold minimalism, more warmth and atmosphere — why the most luxurious bathrooms are often the simplest, and the pieces that help create that feeling.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="spa-bathroom.html">
+        <img src="images/spa-bathroom-hero.jpg" alt="A calm modern bathroom with a freestanding white bath, warm stone tones and soft lighting">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Bathroom</div>
+          <h2>Future Spa Bathroom Ideas for a Calm Modern Home</h2>
+          <p>Less cold minimalism, more warmth and atmosphere — why the most luxurious bathrooms are often the simplest.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="architectural-details-older-homes.html">
-      <img src="images/old-home-keepers.png" alt="Architectural details in an older home worth preserving">
-      <div class="journal-card-label">On the home · Older properties</div>
-      <h2>Architectural Details Worth Preserving in Older Homes</h2>
-      <p>Original windows, fireplaces, floorboards, cornices and doors — why the details that give an older home its soul are worth keeping.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="architectural-details-older-homes.html">
+        <img src="images/old-home-keepers.png" alt="Architectural details in an older home worth preserving">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Older properties</div>
+          <h2>Architectural Details Worth Preserving in Older Homes</h2>
+          <p>Original windows, fireplaces, floorboards, cornices and doors — why the details that give an older home its soul are worth keeping.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="pet-friendly-garden.html">
-      <img src="images/pet-patio.png" alt="Pet-friendly garden patio with beautiful planting and outdoor styling">
-      <div class="journal-card-label">Garden · Pet-friendly</div>
-      <h2>Pet-Friendly Garden Ideas That Still Look Beautiful</h2>
-      <p>A garden that works for dogs and cats doesn't have to look purely practical. Here's how to design an outdoor space that's safe, stylish and easy to live with.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="pet-friendly-garden.html">
+        <img src="images/pet-patio.png" alt="Pet-friendly garden patio with beautiful planting and outdoor styling">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Pet-friendly</div>
+          <h2>Pet-Friendly Garden Ideas That Still Look Beautiful</h2>
+          <p>A garden that works for dogs and cats doesn't have to look purely practical.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="welcoming-front-door.html">
-      <img src="images/Charming-cottage-entrance-rose.png" alt="Charming cottage entrance with roses, a welcoming front door and pretty planting">
-      <div class="journal-card-label">On the home · Kerb appeal</div>
-      <h2>How to Make a Front Door Look More Welcoming</h2>
-      <p>A fresh coat of paint, better hardware, a pair of planters and good lighting — small changes that make a home feel warmer before anyone steps inside.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="welcoming-front-door.html">
+        <img src="images/Charming-cottage-entrance-rose.png" alt="Charming cottage entrance with roses, a welcoming front door and pretty planting">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Kerb appeal</div>
+          <h2>How to Make a Front Door Look More Welcoming</h2>
+          <p>A fresh coat of paint, better hardware, a pair of planters and good lighting — small changes that make a home feel warmer.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="garden-look-expensive.html">
-      <img src="images/look-spenny-garden.png" alt="Beautifully styled garden with larger pots, gravel, soft planting and outdoor seating">
-      <div class="journal-card-label">Garden · Styling</div>
-      <h2>How to Make a Garden Look Expensive Without Spending a Fortune</h2>
-      <p>Restraint, repetition, warm lighting and larger pots — the changes that make the biggest difference for the least money.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="garden-look-expensive.html">
+        <img src="images/look-spenny-garden.png" alt="Beautifully styled garden with larger pots, gravel, soft planting and outdoor seating">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Styling</div>
+          <h2>How to Make a Garden Look Expensive Without Spending a Fortune</h2>
+          <p>Restraint, repetition, warm lighting and larger pots — the changes that make the biggest difference for the least money.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="kenwood-which-mixer.html">
-      <img src="images/Kenwood-which.png" alt="Kenwood stand mixer styled in a bright modern kitchen">
-      <div class="journal-card-label">Kitchen · Buying guide</div>
-      <h2>Which Kenwood Mixer Should You Buy?</h2>
-      <p>From the compact Go to the Titanium Chef Baker — a simple, honest guide to choosing the right Kenwood stand mixer for the way you really bake.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="kenwood-which-mixer.html">
+        <img src="images/Kenwood-which.png" alt="Kenwood stand mixer styled in a bright modern kitchen">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Kitchen · Buying guide</div>
+          <h2>Which Kenwood Mixer Should You Buy?</h2>
+          <p>From the compact Go to the Titanium Chef Baker — a simple, honest guide to choosing the right Kenwood stand mixer.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="le-creuset-casserole.html">
-      <img src="images/crueset-choice.png" alt="Colourful Le Creuset-style casserole dishes arranged on a warm kitchen worktop with herbs, linens and wooden boards">
-      <div class="journal-card-label">Kitchen · Things worth buying</div>
-      <h2>Beautiful and Useful: The Le Creuset Casserole — and Which One to Buy</h2>
-      <p>Why the Le Creuset Signature Cast Iron Casserole is worth the money, what you can cook in it, and which size you need.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="le-creuset-casserole.html">
+        <img src="images/crueset-choice.png" alt="Colourful Le Creuset-style casserole dishes arranged on a warm kitchen worktop with herbs, linens and wooden boards">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Kitchen · Things worth buying</div>
+          <h2>Beautiful and Useful: The Le Creuset Casserole — and Which One to Buy</h2>
+          <p>Why the Le Creuset Signature Cast Iron Casserole is worth the money, and which size you need.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="wildlife-friendly-planting.html">
-      <img src="images/wildlife-garden.png" alt="Wildlife-friendly garden planting with flowers for bees, birds and butterflies">
-      <div class="journal-card-label">Garden · Wildlife</div>
-      <h2>Wildlife-Friendly Planting: What to Grow for Bees and Birds</h2>
-      <p>A wildlife-friendly garden doesn't have to look wild or unloved. Here's what to grow for bees, birds and butterflies — even in a small space.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="wildlife-friendly-planting.html">
+        <img src="images/wildlife-garden.png" alt="Wildlife-friendly garden planting with flowers for bees, birds and butterflies">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Wildlife</div>
+          <h2>Wildlife-Friendly Planting: What to Grow for Bees and Birds</h2>
+          <p>A wildlife-friendly garden doesn't have to look wild or unloved. Here's what to grow for bees, birds and butterflies.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="small-garden-ideas.html">
-      <img src="images/tiny-balcony.png" alt="Tiny balcony garden with compact seating, potted plants and small outdoor styling ideas">
-      <div class="journal-card-label">Garden · Small spaces</div>
-      <h2>Small Garden, Courtyard and Tiny Balcony Ideas That Make the Most of Every Inch</h2>
-      <p>Not every garden comes with a lawn and a border. Here's how to make a small courtyard, patio or balcony feel beautiful, useful and easy to enjoy.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="small-garden-ideas.html">
+        <img src="images/tiny-balcony.png" alt="Tiny balcony garden with compact seating, potted plants and small outdoor styling ideas">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Small spaces</div>
+          <h2>Small Garden, Courtyard and Tiny Balcony Ideas That Make the Most of Every Inch</h2>
+          <p>Here's how to make a small courtyard, patio or balcony feel beautiful, useful and easy to enjoy.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="garden-what-to-do-now.html">
-      <img src="images/may-june-garden.png" alt="Late spring and early summer garden with fresh planting and seasonal jobs to do now">
-      <div class="journal-card-label">Garden · Early summer</div>
-      <h2>What to Do in Your Garden at This Time of Year</h2>
-      <p>Late May into June is when the garden really wakes up. A few small jobs now — watering, feeding, deadheading, styling — can make a big difference all summer.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="garden-what-to-do-now.html">
+        <img src="images/may-june-garden.png" alt="Late spring and early summer garden with fresh planting and seasonal jobs to do now">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Early summer</div>
+          <h2>What to Do in Your Garden at This Time of Year</h2>
+          <p>Late May into June is when the garden really wakes up. A few small jobs now can make a big difference all summer.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="natural-materials.html">
-      <img src="images/natural-materials.png" alt="Natural materials in the home including wood, ceramic and linen">
-      <div class="journal-card-label">On the home</div>
-      <h2>Why I Like to Choose Natural Materials</h2>
-      <p>Wood, ceramic, linen — why the things made from something that came out of the ground tend to be the ones worth keeping.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="natural-materials.html">
+        <img src="images/natural-materials.png" alt="Natural materials in the home including wood, ceramic and linen">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home</div>
+          <h2>Why I Like to Choose Natural Materials</h2>
+          <p>Wood, ceramic, linen — why the things made from something that came out of the ground tend to be the ones worth keeping.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
-    <a class="journal-card" href="garden-lighting.html">
-      <img src="images/lighting-article.png" alt="A warmly lit evening garden with uplighted trees, glowing lanterns and a cosy outdoor seating area">
-      <div class="journal-card-label">Garden · Lighting</div>
-      <h2>How Garden Lighting Changes Everything After Dark</h2>
-      <p>Most gardens disappear at night. Good lighting changes that completely — and the most beautiful results often come from using it gently rather than brightly.</p>
-      <span class="read-more">Read →</span>
-    </a>
+      <a class="journal-card" href="garden-lighting.html">
+        <img src="images/lighting-article.png" alt="A warmly lit evening garden with uplighted trees, glowing lanterns and a cosy outdoor seating area">
+        <div class="journal-card-body">
+          <div class="journal-card-label">Garden · Lighting</div>
+          <h2>How Garden Lighting Changes Everything After Dark</h2>
+          <p>Most gardens disappear at night. Good lighting changes that completely — and the most beautiful results often come from using it gently.</p>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
 
+    </div>
   </div>
 </main>
 
