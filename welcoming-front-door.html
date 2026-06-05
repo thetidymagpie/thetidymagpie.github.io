@@ -41,4 +41,19 @@ body.pinterest-landing .pinterest-products{display:block}.article-hero{padding:3
 <div class="article-divider"></div>
 <p>A welcoming front door is not about making everything perfect. It is about making the entrance feel cared for. Clean the step. Repaint the door if needed. Choose better hardware. Add a doormat that works. Use a planter or two. Bring in some greenery. These small changes can make a home feel warmer before anyone has even stepped inside.</p>
 </div></main>
-<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer></div></body></html>
+<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer></div>
+<script>
+(function(){
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
+  if(!isPinterest) return;
+  document.body.classList.add('pinterest-landing');
+  var btn=document.getElementById('hamburgerBtn');
+  var panel=document.getElementById('pinterestNav');
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+})();
+</script>
+</body></html>

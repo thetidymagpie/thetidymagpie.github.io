@@ -46,4 +46,19 @@ body.pinterest-landing .pinterest-products{display:block}.article-hero{padding:3
 <div class="article-divider"></div>
 <p>Older homes do not need to be frozen in time. They can have modern kitchens, warm lighting, good heating and comfortable furniture. But the magic often lies in the details that have already survived. The old door. The uneven floorboard. The fireplace. The deep skirting. The worn brass handle. These are not flaws. They are the things that make a house feel alive. Preserve what you can. Repair what is worth saving. Replace only when you really need to.</p>
 </div></main>
-<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer></div></body></html>
+<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer></div>
+<script>
+(function(){
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
+  if(!isPinterest) return;
+  document.body.classList.add('pinterest-landing');
+  var btn=document.getElementById('hamburgerBtn');
+  var panel=document.getElementById('pinterestNav');
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+})();
+</script>
+</body></html>
