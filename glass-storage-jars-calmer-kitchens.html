@@ -26,11 +26,33 @@ h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.2rem);lin
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}.footer-mobile-links{display:none}
 @media(max-width:600px){.footer-mobile-links{display:block}}
 @media(max-width:560px){.brand-title{font-size:clamp(3rem,18vw,5rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:30px}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.product-grid{grid-template-columns:1fr}}
+
+/* Pinterest landing */
+.pinterest-bar{display:flex;position:sticky;top:0;z-index:20;background:rgba(252,246,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);padding:.75rem min(4%,1.5rem);align-items:center;justify-content:space-between}
+.pinterest-bar .pb-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.hamburger-btn{background:none;border:none;cursor:pointer;padding:.3rem;display:flex;flex-direction:column;gap:5px}
+.hamburger-btn span{display:block;width:22px;height:1px;background:var(--ink);transition:all .25s ease}
+.hamburger-btn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger-btn.open span:nth-child(2){opacity:0}
+.hamburger-btn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.pinterest-nav-panel{display:none;background:rgba(252,246,238,.98);border-bottom:1px solid var(--line);padding:.75rem min(4%,1.5rem) 1.25rem;backdrop-filter:blur(8px)}
+.pinterest-nav-panel.open{display:block}
+.pinterest-nav-panel a{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.pinterest-nav-panel a:last-child{border-bottom:none}
+.pinterest-nav-panel a:hover,.pinterest-nav-panel a.active{color:var(--sage)}
+.pinterest-products{width:min(720px,92%);margin:2rem auto 0;display:none}
+.pinterest-products .pp-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:.5rem}
+.pinterest-products .pp-note{font-size:.75rem;color:var(--muted);font-style:italic;text-align:center;margin-bottom:1.4rem}
+.pinterest-products .pp-divider{width:48px;height:1px;background:var(--gold);margin:0 auto 1.6rem}
+body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landing nav{display:none}
+body.pinterest-landing .pinterest-bar{display:flex}
+body.pinterest-landing .pinterest-products{display:block}
+
 </style></head><body><div class="page">
 
 <header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-sub">Beautiful & Useful Things for the Home</div></header>
 
-<nav><div class="nav-inner"><button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.getElementById('nav-links').classList.toggle('open')"><span></span><span></span><span></span></button></div><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div></nav>
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
 <a class="sticky-shop-bar" href="#shop-the-look">Get the look ↓</a>
 
@@ -179,5 +201,20 @@ if(new URLSearchParams(window.location.search).get('ref')==='pinterest'){
   document.querySelector('nav').style.display='none';
   document.body.style.paddingTop='42px';
 }
+</script>
+
+<script>
+(function(){
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
+  var btn=document.getElementById('hamburgerBtn');
+  var panel=document.getElementById('pinterestNav');
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+  if(!isPinterest) return;
+  document.body.classList.add('pinterest-landing');
+})();
 </script>
 </body></html>

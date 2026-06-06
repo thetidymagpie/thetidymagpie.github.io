@@ -184,7 +184,29 @@
         padding-top: 2rem;
       }
     }
-  </style>
+  
+/* Pinterest landing */
+.pinterest-bar{display:flex;position:sticky;top:0;z-index:20;background:rgba(252,246,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);padding:.75rem min(4%,1.5rem);align-items:center;justify-content:space-between}
+.pinterest-bar .pb-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.hamburger-btn{background:none;border:none;cursor:pointer;padding:.3rem;display:flex;flex-direction:column;gap:5px}
+.hamburger-btn span{display:block;width:22px;height:1px;background:var(--ink);transition:all .25s ease}
+.hamburger-btn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger-btn.open span:nth-child(2){opacity:0}
+.hamburger-btn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.pinterest-nav-panel{display:none;background:rgba(252,246,238,.98);border-bottom:1px solid var(--line);padding:.75rem min(4%,1.5rem) 1.25rem;backdrop-filter:blur(8px)}
+.pinterest-nav-panel.open{display:block}
+.pinterest-nav-panel a{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.pinterest-nav-panel a:last-child{border-bottom:none}
+.pinterest-nav-panel a:hover,.pinterest-nav-panel a.active{color:var(--sage)}
+.pinterest-products{width:min(720px,92%);margin:2rem auto 0;display:none}
+.pinterest-products .pp-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:.5rem}
+.pinterest-products .pp-note{font-size:.75rem;color:var(--muted);font-style:italic;text-align:center;margin-bottom:1.4rem}
+.pinterest-products .pp-divider{width:48px;height:1px;background:var(--gold);margin:0 auto 1.6rem}
+body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landing nav{display:none}
+body.pinterest-landing .pinterest-bar{display:flex}
+body.pinterest-landing .pinterest-products{display:block}
+
+</style>
 
 </head>
 
@@ -194,13 +216,7 @@
 ```
 <header class="top">
   <a href="index.html" class="brand-small">The Tidy Magpie</a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="kitchen.html">Kitchen</a>
-    <a href="bathroom.html">Bathroom</a>
-    <a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a>
-    <a href="journal.html">About</a>
-  </nav>
+  <div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a class="active" href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 </header>
 
 <section class="article-hero">
@@ -439,5 +455,20 @@
 ```
 
   </div>
+
+<script>
+(function(){
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
+  var btn=document.getElementById('hamburgerBtn');
+  var panel=document.getElementById('pinterestNav');
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+  if(!isPinterest) return;
+  document.body.classList.add('pinterest-landing');
+})();
+</script>
 </body>
 </html>
