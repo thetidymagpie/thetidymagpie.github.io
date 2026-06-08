@@ -37,16 +37,16 @@ body.pinterest-landing .pinterest-products{display:block}
 
 .section-divider{width:48px;height:1px;background:var(--gold);margin:3rem auto}
 
-.shop-section{width:min(720px,92%);margin:0 auto 4rem;padding:2rem;background:#f8f1e6;border:1px solid var(--line);box-shadow:0 8px 25px rgba(0,0,0,.04)}
-.shop-section h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;margin-bottom:.4rem;color:var(--ink)}
-.shop-section .shop-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:1.8rem}
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.look-card{display:block;background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,border-color .2s ease}
-.look-card:hover{transform:translateY(-2px);border-color:var(--sage)}
-.look-card img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
-.look-card div{padding:1.2rem 1.25rem}
-.look-card span{display:block;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;margin-bottom:.4rem}
-.look-card p{margin:0;color:var(--soft);font-size:.95rem}
+.shop-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:500;color:var(--ink);margin-bottom:.5rem}
+.shop-sublabel{text-align:center;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem}
+
+.products-grid{width:min(1000px,92%);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;padding-bottom:1rem}
+.product-card{background:var(--white);border:1px solid var(--line);padding:2rem;display:flex;flex-direction:column;gap:1rem;transition:transform .2s ease,border-color .2s ease}
+.product-card:hover{transform:translateY(-2px);border-color:var(--sage)}
+.product-card-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.product-card h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;line-height:1.2;color:var(--ink)}
+.product-card p{font-size:.92rem;color:var(--soft);line-height:1.75;flex:1;margin:0}
+.product-card a.buy-btn{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem;margin-top:.5rem;align-self:flex-start}
 
 .affiliate-note{width:min(680px,92%);margin:2rem auto 1rem;text-align:center;font-size:.75rem;color:var(--muted);font-style:italic}
 .back-link{display:block;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:3.5rem}
@@ -54,7 +54,7 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.card-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.products-grid{grid-template-columns:1fr}}
 
 </style></head><body><div class="page">
 
@@ -77,53 +77,45 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <main>
 
+  <div class="section-divider"></div>
 
+  <div class="shop-label">Shop Garden Lighting</div>
+  <div class="shop-sublabel">Ad | Affiliate links</div>
 
+  <div class="products-grid">
 
-  <div class="shop-section">
-    <h2>Shop Garden Lighting</h2>
-    <p class="shop-note">Some links below are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
-    <div class="card-grid">
-      <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer">
-        <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c3a67a" stroke-width="1" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-        </div>
-        <div><span>Solar Uplighter</span><p>Ground-level uplighting for trees, shrubs and architectural planting — no wiring needed.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer">
-        <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c3a67a" stroke-width="1" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        </div>
-        <div><span>Fence Solar Lights</span><p>Soft ambient lighting along fences and walls — warm, gentle and easy to install.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer">
-        <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c3a67a" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="8"/>
-            <path d="M12 4v16"/>
-          </svg>
-        </div>
-        <div>
-          <span>Solar Path Lights</span>
-          <p>Soft solar path lighting for garden paths, borders and entrances — a simple way to add warm evening glow without wiring.</p>
-        </div>
-      </a>
-      
-      <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer">
-        <div style="background:var(--cream);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#c3a67a" stroke-width="1" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 12c2-4 4-4 6 0s4 4 6 0 4-4 4 0"/>
-          </svg>
-        </div>
-        <div>
-          <span>Copper Wire Solar Fairy Lights</span>
-          <p>Delicate copper wire solar fairy lights for wrapping through shrubs, pots, fences or small trees to add a soft, magical glow after dark.</p>
-        </div>
-      </a>
+    <div class="product-card">
+      <div class="product-card-label">Garden lighting · Solar uplighter</div>
+      <h2>Solar Uplighter</h2>
+      <p>Ground-level uplighting for trees, shrubs and architectural planting. A simple way to add drama, warmth and atmosphere to a garden after dark without needing wiring.</p>
+      <a class="buy-btn" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
+
+    <div class="product-card">
+      <div class="product-card-label">Garden lighting · Fence lights</div>
+      <h2>Fence Solar Lights</h2>
+      <p>Soft ambient lighting for fences, walls and garden boundaries. These are useful for creating a warmer outdoor seating area without one harsh overhead light.</p>
+      <a class="buy-btn" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-card-label">Garden lighting · Path lights</div>
+      <h2>Solar Path Lights</h2>
+      <p>Low solar path lighting for borders, entrances, gravel paths and stepping stones. They help guide the eye through the garden and make the whole space feel more inviting.</p>
+      <a class="buy-btn" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-card-label">Garden lighting · Fairy lights</div>
+      <h2>Copper Wire Solar Fairy Lights</h2>
+      <p>Delicate copper wire solar fairy lights for weaving through shrubs, pots, fences or small trees. Lovely for adding a soft, magical glow without making the garden feel over-lit.</p>
+      <a class="buy-btn" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
+    </div>
+
   </div>
 
-  
+  <div class="affiliate-note">If you buy through our links we may earn a small commission, at no extra cost to you.</div>
+
   <div class="article-wrap">
     <div class="article-label">Garden · Lighting</div>
     <h1>How Garden Lighting Changes Everything After Dark</h1>
@@ -146,8 +138,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   </div>
 
   <div class="section-divider"></div>
-<div class="affiliate-note">If you buy through our links we may earn a small commission, at no extra cost to you.</div>
-  <a class="back-link" href="journal.html">← Back to Journal</a>
+<a class="back-link" href="journal.html">← Back to Journal</a>
 
 </main>
 
