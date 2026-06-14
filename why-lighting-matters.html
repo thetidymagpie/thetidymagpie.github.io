@@ -28,6 +28,20 @@ body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landin
 body.pinterest-landing .pinterest-bar{display:flex}
 body.pinterest-landing .pinterest-products{display:block}
 
+/* In Pinterest mode: hide the in-article products grid, show article below shop */
+body.pinterest-landing .products-grid{display:none}
+body.pinterest-landing .shop-label,body.pinterest-landing .shop-sublabel{display:none}
+body.pinterest-landing .section-divider{display:none}
+
+/* Pinterest product grid inside the top strip */
+.pinterest-products .products-grid-pinterest{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1rem}
+.pinterest-products .product-card{background:var(--white);border:1px solid var(--line);padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;transition:transform .2s ease,border-color .2s ease}
+.pinterest-products .product-card:hover{transform:translateY(-2px);border-color:var(--sage)}
+.pinterest-products .product-card-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.pinterest-products .product-card h2{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:500;line-height:1.2;color:var(--ink)}
+.pinterest-products .product-card p{font-size:.88rem;color:var(--soft);line-height:1.7;flex:1}
+.pinterest-products .product-card a.buy-btn{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem;margin-top:.3rem;align-self:flex-start}
+
 .article-wrap{width:min(720px,92%);margin:0 auto;padding:3.5rem 0 2rem}
 .article-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:1rem}
 .article-wrap h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:500;line-height:1.1;text-align:center;margin-bottom:2.5rem;color:var(--ink)}
@@ -54,7 +68,7 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.products-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.products-grid{grid-template-columns:1fr}.pinterest-products .products-grid-pinterest{grid-template-columns:1fr}}
 
 </style></head><body><div class="page">
 
@@ -64,12 +78,11 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
-<!-- Pinterest product strip: paste this page's cards inside the card-grid div below -->
 <div class="pinterest-products" id="pinterestProducts">
   <p class="pp-label">Shop this article</p>
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
-  <div class="card-grid">
-    <!-- PASTE THIS PAGE'S PRODUCT CARDS HERE -->
+  <div class="products-grid-pinterest" id="pinterestCardGrid">
+    <!-- JS will clone product cards here in Pinterest mode -->
   </div>
   <div class="pp-divider"></div>
 </div>
@@ -102,7 +115,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   <div class="shop-label">Shop the Layered Lighting look</div>
   <div class="shop-sublabel">Ad | Affiliate links</div>
 
-  <div class="products-grid">
+  <div class="products-grid" id="mainProductGrid">
 
     <div class="product-card">
       <div class="product-card-label">Living room · Table lamp</div>
@@ -182,6 +195,13 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   });
   if(!isPinterest) return;
   document.body.classList.add('pinterest-landing');
+
+  // Clone product cards into the top Pinterest strip
+  var sourceCards = document.querySelectorAll('#mainProductGrid .product-card');
+  var targetGrid = document.getElementById('pinterestCardGrid');
+  sourceCards.forEach(function(card){
+    targetGrid.appendChild(card.cloneNode(true));
+  });
 })();
 </script>
 </body></html>
