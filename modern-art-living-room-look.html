@@ -1,0 +1,91 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Modern Art Living Room | The Tidy Magpie</title><meta name="description" content="A bright modern living room look from The Tidy Magpie with cream furniture, bold abstract art, black and white cushions, a jute rug and natural greenery."><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}
+
+:root{--cream:#f8f2e8;--white:#fdf8f1;--ink:#2c2722;--soft:#625950;--muted:#80766d;--line:#e4d8c9;--sage:#6f7a5e;--gold:#c3a67a;}
+
+body{background:linear-gradient(to bottom,#f8f2e9 0%,#f2e9dc 100%);font-family:'Inter',sans-serif;font-weight:300;color:var(--ink);line-height:1.8;}
+
+a{color:inherit;text-decoration:none}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1.8rem 0 0.5rem}.top-left{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:0.72rem;letter-spacing:0.18em;text-transform:uppercase}.header{text-align:center;padding:0.2rem 0 2rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:0.25rem}.orchid-svg{width:150px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.4rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:0.22em;text-transform:uppercase;margin-bottom:0.3rem}.brand-small:before,.brand-small:after{content:"";width:82px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,15vw,11rem);line-height:0.82;letter-spacing:0.09em;font-weight:500;text-transform:uppercase;margin-bottom:1.25rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:0.78rem;letter-spacing:0.25em;text-transform:uppercase}nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(252,246,238,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:1rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:0.74rem;letter-spacing:0.16em;text-transform:uppercase;padding-bottom:0.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
+
+/* Pinterest landing */
+.pinterest-bar{display:flex;position:sticky;top:0;z-index:20;background:rgba(252,246,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);padding:.75rem min(4%,1.5rem);align-items:center;justify-content:space-between}
+.pinterest-bar .pb-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
+.hamburger-btn{background:none;border:none;cursor:pointer;padding:.3rem;display:flex;flex-direction:column;gap:5px}
+.hamburger-btn span{display:block;width:22px;height:1px;background:var(--ink);transition:all .25s ease}
+.hamburger-btn.open span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.hamburger-btn.open span:nth-child(2){opacity:0}
+.hamburger-btn.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.pinterest-nav-panel{display:none;background:rgba(252,246,238,.98);border-bottom:1px solid var(--line);padding:.75rem min(4%,1.5rem) 1.25rem;backdrop-filter:blur(8px)}
+.pinterest-nav-panel.open{display:block}
+.pinterest-nav-panel a{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding:.5rem 0;border-bottom:1px solid var(--line)}
+.pinterest-nav-panel a:last-child{border-bottom:none}
+.pinterest-nav-panel a:hover,.pinterest-nav-panel a.active{color:var(--sage)}
+.pinterest-products{width:min(720px,92%);margin:2rem auto 0;display:none}
+.pinterest-products .pp-label{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:.5rem}
+.pinterest-products .pp-note{font-size:.75rem;color:var(--muted);font-style:italic;text-align:center;margin-bottom:1.4rem}
+.pinterest-products .pp-divider{width:48px;height:1px;background:var(--gold);margin:0 auto 1.6rem}
+body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landing nav{display:none}
+body.pinterest-landing .pinterest-bar{display:flex}
+body.pinterest-landing .pinterest-products{display:block}footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}@media(max-width:700px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:0.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:0.5rem;text-align:center}}
+
+.journal-image{width:min(980px,100%);margin:0 auto 3rem;border:1px solid var(--line);background:var(--white);padding:0.7rem}.journal-image img{width:100%;display:block;height:auto}.article-wrap{width:min(860px,92%);margin:0 auto;padding:4rem 0 4.5rem}h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.8rem,7vw,5.2rem);line-height:1.05;font-weight:500;text-align:center;margin-bottom:1.8rem}.intro{font-family:'Cormorant Garamond',serif;font-size:clamp(1.3rem,2.5vw,1.8rem);line-height:1.5;color:var(--soft);text-align:center;max-width:680px;margin:0 auto 3rem}.article{background:var(--white);border:1px solid var(--line);padding:clamp(1.5rem,4vw,3rem)}.article p{margin-bottom:1.35rem;color:var(--soft);font-size:1rem}.article h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:500;margin:2.4rem 0 1rem}.shop-box{margin-top:2.5rem;padding:2rem;background:#f8f1e6;border:1px solid var(--line)}.shop-box h2{margin-top:0;font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3vw,2.5rem);font-weight:500;margin-bottom:.4rem}.ad{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:1.4rem!important;margin-top:.2rem!important}.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}.product-card{display:block;background:var(--white);border:1px solid var(--line);padding:1.1rem;transition:transform .2s ease,border-color .2s ease}.product-card:hover{transform:translateY(-2px);border-color:var(--sage)}.product-card span{display:block;font-size:0.78rem;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);margin-bottom:0.55rem}.product-card small{display:block;font-size:0.9rem;line-height:1.55;color:var(--soft)}.back-link{display:inline-block;margin-top:2.2rem;font-size:0.75rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage)}@media(max-width:700px){.product-grid{grid-template-columns:1fr}}
+#shop-the-look{scroll-margin-top:120px;}
+</style></head><body>
+
+<div class="top"><div class="top-left">Curated home finds for<br>beautiful, useful everyday living.</div><div class="top-right"><a href="https://www.pinterest.com/tidymagpie/" target="_blank" rel="noopener noreferrer">Pinterest</a><a href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a>
+<a href="mailto:hello@thetidymagpie.com">Email</a></div></div>
+
+<header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div></header>
+
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a class="active" href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
+
+<main class="article-wrap">
+
+<div id="shop-the-look" class="shop-box">
+<h2>Shop the Look</h2>
+<p class="ad">Some links are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
+<div class="product-grid">
+<a class="product-card" href="https://amzn.to/4xGaAQX" target="_blank" rel="nofollow sponsored noopener"><span>Cream square cube bean bag</span><small>A soft ribbed cube footstool that adds comfort, texture and an easy relaxed layer to the living room.</small></a>
+<a class="product-card" href="https://amzn.to/4oC3715" target="_blank" rel="nofollow sponsored noopener"><span>Joan Miró poster</span><small>A bold modern art print that brings colour, movement and a gallery-style focal point above the sofa.</small></a>
+<a class="product-card" href="https://amzn.to/4oz2QvF" target="_blank" rel="nofollow sponsored noopener"><span>Black and white abstract cushions</span><small>Graphic cushion covers that echo the artwork and make a cream sofa feel sharper and more styled.</small></a>
+<a class="product-card" href="https://amzn.to/4aU5GWt" target="_blank" rel="nofollow sponsored noopener"><span>Clear acrylic coffee table</span><small>A light, barely-there table that keeps the room feeling open while still giving space for books and styling pieces.</small></a>
+<a class="product-card" href="https://amzn.to/4aFWDIH" target="_blank" rel="nofollow sponsored noopener"><span>Natural jute rug</span><small>A warm woven base that grounds the room and softens the modern artwork and black accents.</small></a>
+<a class="product-card" href="https://amzn.to/4a4DG2f" target="_blank" rel="nofollow sponsored noopener"><span>Large artificial tree</span><small>A tall leafy plant that adds height, greenery and a fresh finished feel beside the sofa.</small></a>
+</div>
+</div>
+
+
+
+<h1>The Modern Art Living Room</h1>
+
+<p class="intro">A bright modern living room built around cream furniture, natural jute, clear acrylic and one strong piece of colourful abstract art. The black and white cushions sharpen the look, while the large tree and woven textures keep it warm and liveable.</p>
+
+<figure class="journal-image"><img src="modern-art-living-room.png" alt="Modern cream living room with abstract wall art, black and white cushions, acrylic coffee table, jute rug and large indoor tree"></figure>
+
+<article class="article">
+<p>This living room works because the base is calm and simple: cream upholstery, white walls, a natural jute rug and a clear acrylic coffee table that does not visually crowd the space. That gives the bolder pieces room to breathe.</p>
+<p>The artwork becomes the main focal point, with the black and white cushions picking up the graphic lines without making the room feel heavy. A large leafy tree brings height and softness, while the ribbed cube footstool adds an easy, practical layer for everyday living.</p>
+<p>It is a good example of how a neutral room does not have to feel plain. A few strong choices — one large print, sculptural cushions, natural texture and greenery — can make the whole space feel more considered.</p>
+
+<a class="back-link" href="living-spaces.html">← Back to Living Spaces</a>
+</article>
+
+</main>
+
+<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer>
+
+
+<script>
+(function(){
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
+  var btn=document.getElementById('hamburgerBtn');
+  var panel=document.getElementById('pinterestNav');
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.classList.toggle('open',open);
+  });
+  if(!isPinterest) return;
+  document.body.classList.add('pinterest-landing');
+})();
+</script>
+</body></html>
