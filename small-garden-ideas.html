@@ -30,9 +30,9 @@ body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landin
 body.pinterest-landing .pinterest-bar{display:flex}
 body.pinterest-landing .pinterest-products{display:block}
 
-.article-hero{padding:3.5rem 0 2.5rem;text-align:center}
+.article-hero{padding:2rem 0 1.5rem;text-align:center}
 .article-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:1.2rem}
-.article-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4.2rem);line-height:1.1;font-weight:500;max-width:720px;margin:0 auto 1.2rem}
+.article-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.08;font-weight:500;max-width:760px;margin:0 auto 1rem}
 .journal-image{width:min(980px,92%);margin:0 auto 3rem;border:1px solid var(--line);background:var(--white);padding:.7rem}
 .journal-image img{width:100%;display:block;height:auto}
 
@@ -44,19 +44,22 @@ body.pinterest-landing .pinterest-products{display:block}
 .back-link{display:inline-flex;align-items:center;gap:.5rem;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem;margin-bottom:3rem}
 .back-link:before{content:"←"}
 
-.shop-box{background:#f8f1e6;border:1px solid var(--line);padding:2rem;margin:2.5rem 0}
-.shop-box h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:500;margin-bottom:.5rem;color:var(--ink)}
-.shop-note{font-size:.85rem;color:var(--muted);font-style:italic;margin-bottom:1.4rem}
-.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
-.product-card{display:block;background:var(--white);border:1px solid var(--line);padding:1.1rem;transition:transform .2s ease,border-color .2s ease}
+.buying-guide{width:min(920px,92vw);margin:1.4rem auto 2.5rem;padding:2rem;border:1px solid var(--line);background:rgba(255,255,255,.42);border-radius:18px}
+.buying-guide h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.15;font-weight:500;text-align:center;color:var(--ink);margin:0 0 .35rem}
+.shop-note{max-width:620px;margin:1rem auto 1.5rem;text-align:center;color:var(--muted);font-size:.78rem;font-style:italic;line-height:1.7}
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.product-card{display:block;background:var(--white);border:1px solid var(--line);padding:1.15rem;min-height:100%;transition:transform .2s ease,border-color .2s ease}
 .product-card:hover{transform:translateY(-2px);border-color:var(--sage)}
-.product-card span{display:block;font-size:.78rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink);margin-bottom:.55rem}
-.product-card small{display:block;font-size:.9rem;line-height:1.55;color:var(--soft)}
+.product-card span{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem;font-weight:600}
+.product-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.15;font-weight:500;margin-bottom:.6rem;color:var(--ink)}
+.product-card p{margin:0;color:var(--soft);font-size:.92rem;line-height:1.55}
+.product-card .cta{display:inline-block;margin-top:1rem;color:var(--sage);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
 
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.product-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.buying-guide{padding:1.5rem}.product-grid{grid-template-columns:1fr}}
+@media(min-width:561px) and (max-width:980px){.product-grid{grid-template-columns:repeat(2,1fr)}}
 
 </style></head><body><div class="page">
 
@@ -65,39 +68,32 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div></header>
 
-<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
-<!-- Pinterest product strip: paste this page's cards inside the card-grid div below -->
 <div class="pinterest-products" id="pinterestProducts">
   <p class="pp-label">Shop this article</p>
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
   <div class="card-grid">
-    <!-- PASTE THIS PAGE'S PRODUCT CARDS HERE -->
+    <a class="product-card" href="https://amzn.to/4aju1Vp" target="_blank" rel="noopener noreferrer sponsored">
+      <span>Best first buy</span>
+      <h3>Toulouse Blue Metal Bistro Set</h3>
+      <p>Slim, foldable and ideal for a balcony, courtyard or tiny patio. Gives the space an immediate purpose without overwhelming it.</p>
+    </a>
+    <a class="product-card" href="https://amzn.to/432VEhG" target="_blank" rel="noopener noreferrer sponsored">
+      <span>Best planter</span>
+      <h3>Large Terracotta Pot — Handmade in Italy</h3>
+      <p>One generous pot can make a small outdoor space feel more considered than lots of tiny mismatched pots.</p>
+    </a>
+    <a class="product-card" href="https://amzn.to/4wX0j2c" target="_blank" rel="noopener noreferrer sponsored">
+      <span>Best plant for scent</span>
+      <h3>Lavender Plant</h3>
+      <p>Scent, colour and structure in one pot. Good for sunny balconies, courtyards and small patios.</p>
+    </a>
   </div>
   <div class="pp-divider"></div>
 </div>
 
 <main>
-
-<div class="shop-box">
-      <h2>A few things worth having</h2>
-      <p class="shop-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
-      <div class="product-grid">
-        <a class="product-card" href="https://amzn.to/4aju1Vp" target="_blank" rel="noopener sponsored">
-          <span>Toulouse Blue Metal Bistro Set</span>
-          <small>Slim, foldable and exactly right for a balcony or courtyard. Light enough to move, classic enough to keep forever.</small>
-        </a>
-        <a class="product-card" href="https://amzn.to/432VEhG" target="_blank" rel="noopener sponsored">
-          <span>Large Terracotta Pot — Handmade in Italy</span>
-          <small>One generous pot will do more for a small space than ten small ones. Handmade in Italy and only better with age.</small>
-        </a>
-        <a class="product-card" href="https://amzn.to/4wX0j2c" target="_blank" rel="noopener sponsored">
-          <span>Lavender Plant</span>
-          <small>Scent, colour and structure in one pot. Comes back every year, loves a sunny spot and the bees never leave it alone.</small>
-        </a>
-    
-      </div>
-    </div>
 
   <div class="article-hero">
     <div class="article-label">Garden · Small spaces</div>
@@ -107,6 +103,46 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   <div class="journal-image">
     <img src="images/urban-balcony.png" alt="A beautiful urban balcony with a white bistro set, terracotta pots, wall-mounted planters, lavender, climbing plants and a watering can">
   </div>
+
+  <section class="buying-guide">
+    <h2>Small Garden Essentials: What To Buy First</h2>
+    <p class="shop-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
+    <div class="product-grid">
+      <a class="product-card" href="https://amzn.to/4aju1Vp" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best first buy</span>
+        <h3>Toulouse Blue Metal Bistro Set</h3>
+        <p>Slim, foldable and ideal for a balcony, courtyard or tiny patio. Gives the space an immediate purpose without overwhelming it.</p>
+      </a>
+      <a class="product-card" href="https://amzn.to/432VEhG" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best planter</span>
+        <h3>Large Terracotta Pot — Handmade in Italy</h3>
+        <p>One generous pot can make a small outdoor space feel more considered than lots of tiny mismatched pots.</p>
+      </a>
+      <a class="product-card" href="https://amzn.to/4wX0j2c" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best plant for scent</span>
+        <h3>Lavender Plant</h3>
+        <p>Scent, colour and structure in one pot. Good for sunny balconies, courtyards and small patios.</p>
+      </a>
+      <a class="product-card" href="https://amzn.to/4whU5sA" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best evening upgrade</span>
+        <h3>Solar Lights</h3>
+        <p>Soft lighting makes a small garden usable after dark and helps the space feel warmer and more inviting.</p>
+        <span class="cta">View on Amazon →</span>
+      </a>
+      <a class="product-card" href="https://amzn.to/4gk4ZJT" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best for privacy</span>
+        <h3>Trellis or Screening</h3>
+        <p>Useful for overlooked balconies, patios and courtyards. Adds privacy without making the space feel closed in.</p>
+        <span class="cta">View on Amazon →</span>
+      </a>
+      <a class="product-card" href="https://amzn.to/3SDYveX" target="_blank" rel="noopener noreferrer sponsored">
+        <span>Best space-expander</span>
+        <h3>Garden Mirror</h3>
+        <p>A mirror can bounce light around a small garden and make planting feel deeper and more layered.</p>
+        <span class="cta">View on Amazon →</span>
+      </a>
+    </div>
+  </section>
 
   <div class="article-body">
 
