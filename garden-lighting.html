@@ -37,15 +37,16 @@ body.pinterest-landing .pinterest-products{display:block}
 
 .section-divider{width:48px;height:1px;background:var(--gold);margin:3rem auto}
 
-.shop-section{width:min(720px,92%);margin:0 auto 4rem;padding:1.5rem;background:#f8f1e6;border:1px solid var(--line);box-shadow:0 8px 25px rgba(0,0,0,.04)}
-.shop-section h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;margin-bottom:.4rem;color:var(--ink)}
-.shop-section .shop-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:1rem}
-.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem}
-.look-card{display:block;background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+.shop-section{width:min(920px,92vw);margin:1.4rem 50% 2.5rem;padding:2rem;border:1px solid var(--line);background:rgba(255,255,255,.42);border-radius:18px;transform:translateX(-50%)}
+.shop-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.65rem,3vw,2.25rem);line-height:1.15;font-weight:500;text-align:center;color:var(--ink);margin-bottom:.35rem}
+.shop-section .shop-note{max-width:620px;margin:1rem auto 1.5rem;text-align:center;color:var(--muted);font-size:.78rem;font-style:italic}
+.card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.look-card{display:block;border:1px solid var(--line);background:var(--white);padding:1.15rem;min-height:100%;transition:transform .2s ease,border-color .2s ease}
 .look-card:hover{transform:translateY(-2px);border-color:var(--sage)}
-.look-card div{padding:.9rem 1rem}
-.look-card span{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:.3rem}
-.look-card p{margin:0;color:var(--soft);font-size:.9rem;line-height:1.55}
+.look-card div{padding:0}
+.look-card span{display:block;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem;font-weight:600}
+.look-card h3{font-family:'Cormorant Garamond',serif;font-size:1.35rem;line-height:1.15;font-weight:500;margin-bottom:.6rem;color:var(--ink)}
+.look-card p{margin:0;color:var(--soft);font-size:.92rem;line-height:1.55}
 
 .affiliate-note{width:min(680px,92%);margin:2rem auto 1rem;text-align:center;font-size:.75rem;color:var(--muted);font-style:italic}
 .back-link{display:block;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:3.5rem}
@@ -53,7 +54,8 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.card-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.shop-section{padding:1.5rem}.card-grid{grid-template-columns:1fr}}
+@media(min-width:561px) and (max-width:980px){.card-grid{grid-template-columns:repeat(2,1fr)}}
 
 </style></head><body><div class="page">
 
@@ -69,54 +71,50 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
   <div class="card-grid">
     <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">
-      <div><span>Solar Uplighter</span><p>The garden disappears at night. Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
+      <div><span>The garden disappears at night</span><h3>Solar Uplighter</h3><p>Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
     </a>
     <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">
-      <div><span>Fence Solar Lights</span><p>The fence looks dark and flat. Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
+      <div><span>The fence looks dark and flat</span><h3>Fence Solar Lights</h3><p>Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
     </a>
     <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">
-      <div><span>Solar Path Lights</span><p>Paths and edges feel unfinished. Low lights guide the eye and make the garden feel more considered.</p></div>
+      <div><span>Paths and edges feel unfinished</span><h3>Solar Path Lights</h3><p>Low lights guide the eye and make the garden feel more considered.</p></div>
     </a>
     <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">
-      <div><span>Copper Wire Solar Fairy Lights</span><p>The seating area needs softness. A warm string of light makes chairs, pots and tables feel inviting.</p></div>
+      <div><span>The seating area needs softness</span><h3>Copper Wire Solar Fairy Lights</h3><p>A warm string of light makes chairs, pots and tables feel inviting.</p></div>
     </a>
     <a class="look-card" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">
-      <div><span>Garden Mirror</span><p>A small garden needs more depth. One mirror can bounce light around and make planting feel layered.</p></div>
+      <div><span>A small garden needs more depth</span><h3>Garden Mirror</h3><p>One mirror can bounce light around and make planting feel layered.</p></div>
     </a>
   </div>
   <div class="pp-divider"></div>
 </div>
 
 <main>
-
-
-  <div class="shop-section">
-    <h2>The 5 Things That Make a Garden Work After Dark</h2>
-    <p class="shop-note">Some links below are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
-    <div class="card-grid">
-      <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">
-        <div><span>Solar Uplighter</span><p>The garden disappears at night. Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">
-        <div><span>Fence Solar Lights</span><p>The fence looks dark and flat. Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">
-        <div><span>Solar Path Lights</span><p>Paths and edges feel unfinished. Low lights guide the eye and make the garden feel more considered.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">
-        <div><span>Copper Wire Solar Fairy Lights</span><p>The seating area needs softness. A warm string of light makes chairs, pots and tables feel inviting.</p></div>
-      </a>
-      <a class="look-card" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">
-        <div><span>Garden Mirror</span><p>A small garden needs more depth. One mirror can bounce light around and make planting feel layered.</p></div>
-      </a>
-    </div>
-  </div>
-
-  
   <div class="article-wrap">
     <div class="article-label">Garden · Lighting</div>
     <h1>How Garden Lighting Changes Everything After Dark</h1>
     <img class="article-hero" src="images/lighting-article.png" alt="A warmly lit evening garden with uplighted trees, glowing lanterns and a cosy outdoor seating area surrounded by planting">
+    <div class="shop-section">
+      <h2>The 5 Things That Make a Garden Work After Dark</h2>
+      <p class="shop-note">Some links below are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
+      <div class="card-grid">
+        <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">
+          <div><span>The garden disappears at night</span><h3>Solar Uplighter</h3><p>Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
+        </a>
+        <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">
+          <div><span>The fence looks dark and flat</span><h3>Fence Solar Lights</h3><p>Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
+        </a>
+        <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">
+          <div><span>Paths and edges feel unfinished</span><h3>Solar Path Lights</h3><p>Low lights guide the eye and make the garden feel more considered.</p></div>
+        </a>
+        <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">
+          <div><span>The seating area needs softness</span><h3>Copper Wire Solar Fairy Lights</h3><p>A warm string of light makes chairs, pots and tables feel inviting.</p></div>
+        </a>
+        <a class="look-card" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">
+          <div><span>A small garden needs more depth</span><h3>Garden Mirror</h3><p>One mirror can bounce light around and make planting feel layered.</p></div>
+        </a>
+      </div>
+    </div>
     <div class="article-body">
       <p>Most gardens disappear at night. You spend months planting borders, shaping paths, choosing trees and arranging pots — and then as soon as the sun goes down, it all vanishes into darkness. Good garden lighting changes that completely. It turns the garden into something you can still enjoy long after evening arrives. More than that, it changes the atmosphere entirely.</p>
       <p>A garden during the day is about colour, texture and planting. At night, it becomes about glow, shadow, shape and mood.</p>
