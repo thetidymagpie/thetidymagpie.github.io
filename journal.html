@@ -4,9 +4,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--cream:#f8f2e8;--white:#fdf8f1;--ink:#2c2722;--soft:#625950;--muted:#80766d;--line:#e4d8c9;--sage:#6f7a5e;--gold:#c3a67a;}
 body{background:linear-gradient(to bottom,#f8f2e9 0%,#f2e9dc 100%);font-family:'Inter',sans-serif;font-weight:300;color:var(--ink);line-height:1.8;}
-a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1.8rem 0 .5rem}.top-left{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}.header{text-align:center;padding:.2rem 0 2rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:.25rem}.orchid-svg{width:150px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.4rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.7rem,3vw,2.5rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.3rem}.brand-small:before,.brand-small:after{content:"";width:82px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(5rem,15vw,11rem);line-height:.82;letter-spacing:.09em;font-weight:600;text-transform:uppercase;margin-bottom:1.25rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase}
-nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(252,246,238,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:1rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
+a{color:inherit;text-decoration:none}.page{overflow:hidden}.top{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between;align-items:flex-start;padding:1rem 0 .25rem}.top-left{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;line-height:1.8}.top-right{display:flex;gap:1.7rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase}.header{text-align:center;padding:.1rem 0 1rem}.orchid-wrap{display:flex;justify-content:center;margin-bottom:.15rem}.orchid-svg{width:118px;height:auto;display:block}.brand-small{display:flex;align-items:center;justify-content:center;gap:1.1rem;font-family:'Cormorant Garamond',serif;font-size:clamp(1.35rem,2.2vw,1.9rem);letter-spacing:.22em;text-transform:uppercase;margin-bottom:.15rem}.brand-small:before,.brand-small:after{content:"";width:62px;height:1px;background:var(--line)}.brand-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3.6rem,10.8vw,8rem);line-height:.82;letter-spacing:.09em;font-weight:600;text-transform:uppercase;margin-bottom:.65rem}.magpie{background:linear-gradient(120deg,#101112 0%,#17393c 18%,#006974 35%,#24437f 53%,#10295b 66%,#0b4d46 83%,#111213 100%);-webkit-background-clip:text;background-clip:text;color:transparent}.brand-tag{font-size:.78rem;letter-spacing:.25em;text-transform:uppercase}
+nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(252,246,238,.94);position:sticky;top:0;z-index:10;backdrop-filter:blur(8px)}.nav-inner{width:min(1050px,92%);margin:auto;display:flex;justify-content:space-between;padding:.75rem 0;gap:1rem;flex-wrap:wrap}nav a{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;padding-bottom:.28rem;border-bottom:1px solid transparent}nav a:hover,nav a.active{color:var(--sage);border-color:var(--sage)}
 
+/* Pinterest landing */
 .pinterest-bar{display:flex;position:sticky;top:0;z-index:20;background:rgba(252,246,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);padding:.75rem min(4%,1.5rem);align-items:center;justify-content:space-between}
 .pinterest-bar .pb-logo{font-family:'Cormorant Garamond',serif;font-size:1.15rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink)}
 .hamburger-btn{background:none;border:none;cursor:pointer;padding:.3rem;display:flex;flex-direction:column;gap:5px}
@@ -43,16 +44,17 @@ body.pinterest-landing .pinterest-products{display:block}
 .journal-card p{font-size:.88rem;color:var(--soft);line-height:1.7;margin-bottom:1rem}
 .journal-card .read-more{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem}
 
-.journal-card.pinned{grid-column:1/-1;display:block;border-color:var(--gold);max-width:720px;margin:0 auto 2rem;text-align:center}
-.journal-card.pinned img{width:100%;max-width:420px;aspect-ratio:2/3;height:auto;object-fit:contain;display:block;margin:1.4rem auto .5rem;background:#fdf8f1}
-.journal-card.pinned .journal-card-body{padding:1rem 2rem 2rem;display:block;text-align:center}
-.journal-card.pinned h2{font-size:clamp(1.8rem,3vw,2.6rem);max-width:560px;margin:0 auto .7rem}
+/* PINNED CARD — spans full width, always first */
+.journal-card.pinned{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;border-color:var(--gold)}
+.journal-card.pinned img{aspect-ratio:3/2;height:100%;object-fit:cover}
+.journal-card.pinned .journal-card-body{padding:2rem 2.2rem;display:flex;flex-direction:column;justify-content:center}
+.journal-card.pinned h2{font-size:clamp(1.6rem,3vw,2.4rem)}
 .journal-card.pinned .journal-card-label::before{content:"— ";color:var(--gold)}
 
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
-@media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}.journal-grid{grid-template-columns:repeat(2,1fr)}.journal-card.pinned{display:block;max-width:720px}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.journal-grid{grid-template-columns:1fr}.journal-card.pinned{grid-column:auto;max-width:100%}}
+@media(max-width:900px){.top{flex-direction:column;align-items:center;gap:.6rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}.journal-grid{grid-template-columns:repeat(2,1fr)}.journal-card.pinned{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(3rem,16vw,4.4rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.journal-grid{grid-template-columns:1fr}.journal-card.pinned{grid-column:auto}}
 
 </style></head><body><div class="page">
 
@@ -61,14 +63,12 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div></header>
 
-<nav><div class="nav-inner"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div></nav>
-
-<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
 <div class="pinterest-products" id="pinterestProducts">
   <p class="pp-label">Shop this article</p>
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
-  <div class="card-grid"></div>
+  <div class="card-grid"><!-- PASTE THIS PAGE'S PRODUCT CARDS HERE --></div>
   <div class="pp-divider"></div>
 </div>
 
@@ -81,13 +81,26 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   <div class="journal-content">
     <div class="journal-grid">
 
+      <!-- PINNED — always keep this card first -->
       <a class="journal-card pinned" href="beautiful-and-useful.html">
         <img src="images/beautiful-and-useful.png" alt="Calm styled home details chosen to be both beautiful and useful">
         <div class="journal-card-body">
           <div class="journal-card-label">On the home</div>
           <h2>Beautiful and Useful</h2>
           <p>Why everyday things deserve to be both practical and lovely — and what happens when they are.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
+        </div>
+      </a>
+
+      <!-- Add new articles below this line -->
+
+      <a class="journal-card" href="small-utility-room-ideas.html">
+        <img src="images/utility-room.jpg" alt="Small utility room with stacked washer dryer, wooden worktop, hanging rail, baskets and built-in laundry storage">
+        <div class="journal-card-body">
+          <div class="journal-card-label">On the home · Utility room</div>
+          <h2>Small Utility Room Ideas for Laundry, Storage and Cleaning</h2>
+          <p>Practical ideas for making a small utility room work harder, with storage for laundry, cleaning products, baskets, drying racks and everyday household clutter.</p>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -97,7 +110,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Lighting</div>
           <h2>Why Lighting Matters More Than Almost Anything Else In A Home</h2>
           <p>Lighting changes the feeling of a home more than almost anything else — and it is often the last thing people think to change.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -107,7 +120,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Kitchen</div>
           <h2>Why Cast Iron Cookware Always Feels Worth Keeping</h2>
           <p>A good cast iron casserole dish is one of those rare kitchen pieces that seems to get better the longer it stays in a home.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -117,7 +130,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Kitchen</div>
           <h2>Why Glass Storage Jars Make Kitchens Feel Calmer</h2>
           <p>Good storage changes the atmosphere of a kitchen far more than people expect.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -127,7 +140,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Garden</div>
           <h2>Why Outdoor Rooms Feel So Luxurious</h2>
           <p>A table beneath trees, lanterns glowing in the evening, natural materials that weather beautifully over time.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -137,7 +150,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Bedroom</div>
           <h2>Soft White Bedroom Ideas That Feel Like an Italian Villa</h2>
           <p>Soft light, natural textures, rumpled linen and a little bit of quiet.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -147,7 +160,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Bedroom</div>
           <h2>Why Japandi Bedrooms Feel So Calming</h2>
           <p>Japandi style combines Japanese simplicity with Scandinavian warmth — and the result is a bedroom that feels genuinely restful.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -157,7 +170,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Bathroom</div>
           <h2>Future Spa Bathroom Ideas for a Calm Modern Home</h2>
           <p>Less cold minimalism, more warmth and atmosphere — why the most luxurious bathrooms are often the simplest.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -167,7 +180,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Older properties</div>
           <h2>Architectural Details Worth Preserving in Older Homes</h2>
           <p>Original windows, fireplaces, floorboards, cornices and doors — why the details that give an older home its soul are worth keeping.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -177,19 +190,9 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Pet-friendly</div>
           <h2>Pet-Friendly Garden Ideas That Still Look Beautiful</h2>
           <p>A garden that works for dogs and cats doesn't have to look purely practical.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
-
-      <a class="journal-card" href="warm-minimalist-living-room.html">
-  <img src="images/acoustic-wall-room.png" alt="Warm minimalist living room with oak acoustic slat wall panels, round storage coffee table, jute rug and white orchid arrangement">
-  <div class="journal-card-body">
-    <div class="journal-card-label">Living Spaces · Minimalist</div>
-    <h2>Warm Minimalist Living Room with Acoustic Wall Panels</h2>
-    <p>Warm oak tones, natural texture and clean lines — how a slat wall, jute rug and a few considered pieces create a calm, organised living room.</p>
-    <span class="read-more">Read &#x2192;</span>
-  </div>
-</a>
 
       <a class="journal-card" href="welcoming-front-door.html">
         <img src="images/Charming-cottage-entrance-rose.png" alt="Charming cottage entrance with roses, a welcoming front door and pretty planting">
@@ -197,7 +200,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home · Kerb appeal</div>
           <h2>How to Make a Front Door Look More Welcoming</h2>
           <p>A fresh coat of paint, better hardware, a pair of planters and good lighting — small changes that make a home feel warmer.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -207,7 +210,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Styling</div>
           <h2>How to Make a Garden Look Expensive Without Spending a Fortune</h2>
           <p>Restraint, repetition, warm lighting and larger pots — the changes that make the biggest difference for the least money.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -217,7 +220,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Kitchen · Buying guide</div>
           <h2>Which Kenwood Mixer Should You Buy?</h2>
           <p>From the compact Go to the Titanium Chef Baker — a simple, honest guide to choosing the right Kenwood stand mixer.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -227,7 +230,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Kitchen · Things worth buying</div>
           <h2>Beautiful and Useful: The Le Creuset Casserole — and Which One to Buy</h2>
           <p>Why the Le Creuset Signature Cast Iron Casserole is worth the money, and which size you need.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -237,7 +240,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Wildlife</div>
           <h2>Wildlife-Friendly Planting: What to Grow for Bees and Birds</h2>
           <p>A wildlife-friendly garden doesn't have to look wild or unloved. Here's what to grow for bees, birds and butterflies.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -247,39 +250,19 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Small spaces</div>
           <h2>Small Garden, Courtyard and Tiny Balcony Ideas That Make the Most of Every Inch</h2>
           <p>Here's how to make a small courtyard, patio or balcony feel beautiful, useful and easy to enjoy.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
-
-      <a class="journal-card" href="garden-home-bigger.html">
-        <img src="images/garden-home-bigger.png" alt="A small garden patio styled with festoon lights, a garden sofa, large ceramic pots and a woven outdoor mat">
-        <div class="journal-card-body">
-          <div class="journal-card-label">Garden · Outdoor living</div>
-          <h2>Small Garden Ideas That Make Your Home Feel Bigger</h2>
-          <p>You don't need a large garden to have an outdoor space worth lingering in. A few well-chosen things, placed thoughtfully, make all the difference.</p>
-          <span class="read-more">Read &#x2192;</span>
-        </div>
-      </a>
-
-      <a class="journal-card" href="small-kitchen-ideas.html">
-        <img src="images/small-kitchen-ideas.png" alt="Small organised kitchen with open shelving, glass storage jars, rolling storage trolley and clever space-saving storage ideas">
-        <div class="journal-card-body">
-          <div class="journal-card-label">On the home · Kitchen</div>
-          <h2>Small Kitchen Ideas That Make Every Inch Work</h2>
-          <p>Clever storage, calm organisation and practical ideas that help even the smallest kitchen feel bigger, brighter and easier to use every day.</p>
-          <span class="read-more">Read &#x2192;</span>
-        </div>
-      </a>
-
+      
       <a class="journal-card" href="coffee-corner-ideas-for-a-calm-morning-kitchen.html">
-        <img src="images/coffee-corner-calm-morning-kitchen.png" alt="Beautiful coffee corner with cream cabinets, open shelving, stoneware mugs and soft morning light">
-        <div class="journal-card-body">
-          <div class="journal-card-label">On the home · Kitchen</div>
-          <h2>Coffee Corner Ideas For A Calm Morning Kitchen</h2>
-          <p>A coffee corner is not really about coffee. It is about creating a small daily ritual and one of the most welcoming corners in the kitchen.</p>
-          <span class="read-more">Read &#x2192;</span>
-        </div>
-      </a>
+  <img src="images/coffee-corner-calm-morning-kitchen.png" alt="Beautiful coffee corner with cream cabinets, open shelving, stoneware mugs and soft morning light">
+  <div class="journal-card-body">
+    <div class="journal-card-label">On the home · Kitchen</div>
+    <h2>Coffee Corner Ideas For A Calm Morning Kitchen</h2>
+    <p>A coffee corner is not really about coffee. It is about creating a small daily ritual and one of the most welcoming corners in the kitchen.</p>
+    <span class="read-more">Read →</span>
+  </div>
+</a>
 
       <a class="journal-card" href="garden-what-to-do-now.html">
         <img src="images/may-june-garden.png" alt="Late spring and early summer garden with fresh planting and seasonal jobs to do now">
@@ -287,7 +270,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Early summer</div>
           <h2>What to Do in Your Garden at This Time of Year</h2>
           <p>Late May into June is when the garden really wakes up. A few small jobs now can make a big difference all summer.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -297,7 +280,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">On the home</div>
           <h2>Why I Like to Choose Natural Materials</h2>
           <p>Wood, ceramic, linen — why the things made from something that came out of the ground tend to be the ones worth keeping.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -307,17 +290,7 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
           <div class="journal-card-label">Garden · Lighting</div>
           <h2>How Garden Lighting Changes Everything After Dark</h2>
           <p>Most gardens disappear at night. Good lighting changes that completely — and the most beautiful results often come from using it gently.</p>
-          <span class="read-more">Read &#x2192;</span>
-        </div>
-      </a>
-
-      <a class="journal-card" href="small-storage-room-journal.html">
-        <img src="images/small-storage-room-journal.jpg" alt="A neatly organised small storage room with woven baskets on shelves, fabric storage boxes and a rolling trolley for cleaning supplies">
-        <div class="journal-card-body">
-          <div class="journal-card-label">On the home · Storage</div>
-          <h2>Small Storage Room Solutions That Make a Big Difference</h2>
-          <p>The secret is not finding more space — it is making better use of the space you already have.</p>
-          <span class="read-more">Read &#x2192;</span>
+          <span class="read-more">Read →</span>
         </div>
       </a>
 
@@ -325,12 +298,13 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
   </div>
 </main>
 
-<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>&#169; The Tidy Magpie</div></div></footer>
+<footer><div class="footer-inner"><div><a href="about.html">About</a> | <a href="mailto:hello@thetidymagpie.com">Contact</a> | <a href="privacy.html">Privacy</a></div><div>© The Tidy Magpie</div></div></footer>
 
 </div>
 <script>
 (function(){
   var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  // var isPinterest = true; // uncomment to test locally
   var btn=document.getElementById('hamburgerBtn');
   var panel=document.getElementById('pinterestNav');
   btn.addEventListener('click',function(){
