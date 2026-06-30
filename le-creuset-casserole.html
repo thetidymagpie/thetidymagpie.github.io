@@ -125,6 +125,101 @@
       padding: 2.8rem 0 4rem;
     }
 
+    .buying-guide {
+      width: min(920px, 92%);
+      margin: 1.4rem auto 0;
+      padding: 2rem;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.42);
+      border-radius: 18px;
+    }
+
+    .buying-guide h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.65rem, 3vw, 2.25rem);
+      line-height: 1.15;
+      font-weight: 500;
+      text-align: center;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .guide-kicker,
+    .affiliate-disclosure {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    .affiliate-disclosure {
+      max-width: 620px;
+      margin: 1rem auto 1.5rem;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .product-card {
+      display: block;
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 1.15rem;
+      min-height: 100%;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--sage);
+    }
+
+    .product-card .label {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.55rem;
+      font-weight: 600;
+    }
+
+    .product-card h3 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem;
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      color: var(--ink);
+    }
+
+    .product-card p {
+      color: var(--soft);
+      font-size: 0.92rem;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .internal-link-box {
+      margin-top: 1.4rem;
+      border-top: 1px solid var(--line);
+      padding-top: 1.2rem;
+      text-align: center;
+      color: var(--soft);
+      font-size: 0.95rem;
+    }
+
+    .internal-link-box a {
+      color: var(--sage);
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
     .article-body p {
       font-size: 1rem;
       color: var(--soft);
@@ -183,6 +278,20 @@
       .article-body {
         padding-top: 2rem;
       }
+
+      .buying-guide {
+        padding: 1.5rem;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 701px) and (max-width: 980px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   
 /* Pinterest landing */
@@ -213,11 +322,11 @@ body.pinterest-landing .pinterest-products{display:block}
 <body>
   <div class="page">
 
-```
 <header class="top">
   <a href="index.html" class="brand-small">The Tidy Magpie</a>
-  <div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a class="active" href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 </header>
+
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a class="active" href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
 <section class="article-hero">
   <div class="article-label">Kitchen Buying Guide</div>
@@ -229,6 +338,35 @@ body.pinterest-landing .pinterest-products{display:block}
   <div class="hero-image">
     <img src="images/crueset-choice.png" alt="Colourful Le Creuset-style casserole dishes arranged on a warm kitchen worktop with herbs, linens and wooden boards">
   </div>
+</section>
+
+<section class="buying-guide" id="quick-answer">
+  <h2>Quick Answer: Which Le Creuset Should You Buy?</h2>
+  <p class="guide-kicker">Ad | Affiliate links</p>
+  <p class="affiliate-disclosure">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <span class="label">Best first buy</span>
+      <h3>Medium Round Casserole</h3>
+      <p>The safest first Le Creuset for most homes. Best for soups, stews, chilli, curry, sauces, bread baking and everyday one-pot cooking.</p>
+    </div>
+    <div class="product-card">
+      <span class="label">Best for weeknight cooking</span>
+      <h3>Shallow Casserole</h3>
+      <p>Better for risotto, pasta, chicken pieces, reducing sauces and food that starts on the hob and finishes in the oven.</p>
+    </div>
+    <div class="product-card">
+      <span class="label">Best for roasts</span>
+      <h3>Oval Casserole</h3>
+      <p>Best if you regularly cook whole chickens, joints of meat or longer cuts that do not fit neatly in a round pot.</p>
+    </div>
+    <div class="product-card">
+      <span class="label">Best for smaller kitchens</span>
+      <h3>Smaller Round Casserole</h3>
+      <p>A useful option for one or two people, side dishes, sauces and smaller portions, but not the best first buy for family cooking.</p>
+    </div>
+  </div>
+  <div class="internal-link-box">Still deciding whether cast iron is worth it? Read: <a href="cast-iron-worth-keeping.html">Why Cast Iron Cookware Always Feels Worth Keeping.</a></div>
 </section>
 
 <main class="article-body">
@@ -452,7 +590,6 @@ body.pinterest-landing .pinterest-products{display:block}
   <a href="mailto:hello@thetidymagpie.com">Contact</a>
   <a href="privacy.html">Privacy</a>
 </footer>
-```
 
   </div>
 

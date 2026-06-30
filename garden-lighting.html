@@ -37,16 +37,15 @@ body.pinterest-landing .pinterest-products{display:block}
 
 .section-divider{width:48px;height:1px;background:var(--gold);margin:3rem auto}
 
-.shop-label{text-align:center;font-family:'Cormorant Garamond',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:500;color:var(--ink);margin-bottom:.5rem}
-.shop-sublabel{text-align:center;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2.5rem}
-
-.products-grid{width:min(1000px,92%);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem;padding-bottom:1rem}
-.product-card{background:var(--white);border:1px solid var(--line);padding:2rem;display:flex;flex-direction:column;gap:1rem;transition:transform .2s ease,border-color .2s ease}
-.product-card:hover{transform:translateY(-2px);border-color:var(--sage)}
-.product-card-label{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-.product-card h2{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;line-height:1.2;color:var(--ink)}
-.product-card p{font-size:.92rem;color:var(--soft);line-height:1.75;flex:1;margin:0}
-.product-card a.buy-btn{display:inline-block;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);border-bottom:1px solid var(--sage);padding-bottom:.15rem;margin-top:.5rem;align-self:flex-start}
+.shop-section{width:min(720px,92%);margin:0 auto 4rem;padding:1.5rem;background:#f8f1e6;border:1px solid var(--line);box-shadow:0 8px 25px rgba(0,0,0,.04)}
+.shop-section h2{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:500;margin-bottom:.4rem;color:var(--ink)}
+.shop-section .shop-note{font-size:.8rem;color:var(--muted);font-style:italic;margin-bottom:1rem}
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.85rem}
+.look-card{display:block;background:var(--white);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,border-color .2s ease}
+.look-card:hover{transform:translateY(-2px);border-color:var(--sage)}
+.look-card div{padding:.9rem 1rem}
+.look-card span{display:block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:.3rem}
+.look-card p{margin:0;color:var(--soft);font-size:.9rem;line-height:1.55}
 
 .affiliate-note{width:min(680px,92%);margin:2rem auto 1rem;text-align:center;font-size:.75rem;color:var(--muted);font-style:italic}
 .back-link{display:block;text-align:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sage);margin-bottom:3.5rem}
@@ -54,7 +53,7 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.products-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.card-grid{grid-template-columns:1fr}}
 
 </style></head><body><div class="page">
 
@@ -63,74 +62,57 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <header class="header"><div class="orchid-wrap"><svg class="orchid-svg" viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="#BEA06A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M120 10 C92 39 88 80 120 111 C152 80 148 39 120 10Z"/><path d="M116 108 C82 77 36 80 16 129 C57 151 99 139 116 108Z"/><path d="M124 108 C158 77 204 80 224 129 C183 151 141 139 124 108Z"/><path d="M120 109 C96 122 96 148 120 164 C144 148 144 122 120 109Z"/><path d="M120 103 C111 112 107 127 112 140"/><path d="M120 103 C129 112 133 127 128 140"/><path d="M112 116 C105 120 103 130 108 139"/><path d="M128 116 C135 120 137 130 132 139"/><path d="M120 112 C116 124 116 137 120 149 C124 137 124 124 120 112Z"/><path d="M108 139 C114 151 126 151 132 139"/></g></svg></div><div class="brand-small">The Tidy</div><div class="brand-title"><span class="magpie">Magpie</span></div><div class="brand-tag">A quieter way to find beautiful, useful things for the home.</div></header>
 
-<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><div class="hamburger-lines"><span></span><span></span><span></span></div><span class="menu-label">Menu</span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
+<div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
-<!-- Pinterest product strip: paste this page's cards inside the card-grid div below -->
 <div class="pinterest-products" id="pinterestProducts">
   <p class="pp-label">Shop this article</p>
   <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
   <div class="card-grid">
-    <!-- PASTE THIS PAGE'S PRODUCT CARDS HERE -->
+    <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">
+      <div><span>Solar Uplighter</span><p>The garden disappears at night. Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
+    </a>
+    <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">
+      <div><span>Fence Solar Lights</span><p>The fence looks dark and flat. Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
+    </a>
+    <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">
+      <div><span>Solar Path Lights</span><p>Paths and edges feel unfinished. Low lights guide the eye and make the garden feel more considered.</p></div>
+    </a>
+    <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">
+      <div><span>Copper Wire Solar Fairy Lights</span><p>The seating area needs softness. A warm string of light makes chairs, pots and tables feel inviting.</p></div>
+    </a>
+    <a class="look-card" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">
+      <div><span>Garden Mirror</span><p>A small garden needs more depth. One mirror can bounce light around and make planting feel layered.</p></div>
+    </a>
   </div>
   <div class="pp-divider"></div>
 </div>
 
 <main>
 
-  <div class="section-divider"></div>
 
-  <div class="shop-label">Shop Garden Lighting</div>
-  <div class="shop-sublabel">Ad | Affiliate links</div>
-
-  <div class="products-grid">
-
-    <div class="product-card">
-      <div class="product-card-label">Garden lighting · Solar uplighter</div>
-      <h2>Solar Uplighter</h2>
-      <p>Ground-level uplighting for trees, shrubs and architectural planting. A simple way to add drama, warmth and atmosphere to a garden after dark without needing wiring.</p>
-      <a class="buy-btn" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
+  <div class="shop-section">
+    <h2>The 5 Things That Make a Garden Work After Dark</h2>
+    <p class="shop-note">Some links below are affiliate links — if you buy something, I may earn a small commission at no extra cost to you.</p>
+    <div class="card-grid">
+      <a class="look-card" href="https://amzn.to/4onrsI1" target="_blank" rel="noopener noreferrer sponsored">
+        <div><span>Solar Uplighter</span><p>The garden disappears at night. Ground-level uplighting brings trees, shrubs and planting back into view.</p></div>
+      </a>
+      <a class="look-card" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">
+        <div><span>Fence Solar Lights</span><p>The fence looks dark and flat. Warm wall lighting gives boundaries shape, rhythm and a softer edge.</p></div>
+      </a>
+      <a class="look-card" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">
+        <div><span>Solar Path Lights</span><p>Paths and edges feel unfinished. Low lights guide the eye and make the garden feel more considered.</p></div>
+      </a>
+      <a class="look-card" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">
+        <div><span>Copper Wire Solar Fairy Lights</span><p>The seating area needs softness. A warm string of light makes chairs, pots and tables feel inviting.</p></div>
+      </a>
+      <a class="look-card" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">
+        <div><span>Garden Mirror</span><p>A small garden needs more depth. One mirror can bounce light around and make planting feel layered.</p></div>
+      </a>
     </div>
-
-    <div class="product-card">
-      <div class="product-card-label">Garden lighting · Fence lights</div>
-      <h2>Fence Solar Lights</h2>
-      <p>Soft ambient lighting for fences, walls and garden boundaries. These are useful for creating a warmer outdoor seating area without one harsh overhead light.</p>
-      <a class="buy-btn" href="https://amzn.to/4uW2lhJ" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-card-label">Garden lighting · Path lights</div>
-      <h2>Solar Path Lights</h2>
-      <p>Low solar path lighting for borders, entrances, gravel paths and stepping stones. They help guide the eye through the garden and make the whole space feel more inviting.</p>
-      <a class="buy-btn" href="https://amzn.to/4vEgwIp" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-card-label">Garden lighting · Fairy lights</div>
-      <h2>Copper Wire Solar Fairy Lights</h2>
-      <p>Delicate copper wire solar fairy lights for weaving through shrubs, pots, fences or small trees. Lovely for adding a soft, magical glow without making the garden feel over-lit.</p>
-      <a class="buy-btn" href="https://amzn.to/4xtjzVw" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
-    </div>
-
-
-    <div class="product-card">
-      <div class="product-card-label">Garden decor · Mirror</div>
-      <h2>Country Window Garden Mirror</h2>
-      <p>A country-style garden mirror that reflects planting and evening light, helping a patio, courtyard or smaller garden feel deeper, brighter and more atmospheric.</p>
-      <a class="buy-btn" href="https://amzn.to/4e8FjNv" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
-    </div>
-
-    <div class="product-card">
-      <div class="product-card-label">Garden decor · Mirror with shutters</div>
-      <h2>Antique Glass Garden Mirror With Shutters</h2>
-      <p>A characterful outdoor mirror with shutters that adds depth, charm and a soft focal point to garden walls, seating areas and patios after dark.</p>
-      <a class="buy-btn" href="https://amzn.to/4uqtpo5" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
-    </div>
-
   </div>
 
-  <div class="affiliate-note">If you buy through our links we may earn a small commission, at no extra cost to you.</div>
-
+  
   <div class="article-wrap">
     <div class="article-label">Garden · Lighting</div>
     <h1>How Garden Lighting Changes Everything After Dark</h1>
@@ -149,11 +131,13 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
       <p>One of the nicest things about garden lighting is that it changes the way the garden is used. A garden that felt purely practical during the day suddenly becomes somewhere to sit quietly with a drink, have dinner outside or simply look at through the windows in the evening.</p>
       <p>You do not need a huge garden either. Even a small patio, courtyard or balcony can feel atmospheric with the right lighting. A few pots, one tree, warm lighting and somewhere comfortable to sit can completely change the mood of a space.</p>
       <p>The best garden lighting rarely announces itself. Instead, it quietly makes everything else look more beautiful.</p>
+      <p>Planning a smaller outdoor space? Read: <a href="tiny-courtyard-secret-garden.html">Tiny Courtyard Secret Garden Ideas.</a></p>
     </div>
   </div>
 
   <div class="section-divider"></div>
-<a class="back-link" href="journal.html">← Back to Journal</a>
+<div class="affiliate-note">If you buy through our links we may earn a small commission, at no extra cost to you.</div>
+  <a class="back-link" href="journal.html">← Back to Journal</a>
 
 </main>
 
