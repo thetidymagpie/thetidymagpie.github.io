@@ -28,8 +28,8 @@ body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landin
 body.pinterest-landing .pinterest-bar{display:flex}
 body.pinterest-landing .pinterest-products{display:block}
 
-.look-hero{width:100%;position:relative}
-.look-hero img{width:100%;height:auto;object-fit:contain;display:block}
+.look-hero{width:min(980px,92%);height:min(760px,78vh);position:relative;margin:0 auto;background:var(--white);display:flex;justify-content:center;align-items:center;overflow:hidden}
+.look-hero img{max-width:100%;height:100%;object-fit:contain;display:block}
 .look-hero-caption{position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(to top,rgba(44,39,34,.45),transparent);color:#fdf8f1;text-align:center}
 .look-hero-caption h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;letter-spacing:.06em;line-height:1.1;margin-bottom:.4rem}
 .look-hero-caption p{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
@@ -37,6 +37,10 @@ body.pinterest-landing .pinterest-products{display:block}
 .look-intro{width:min(680px,92%);margin:3rem auto 0;color:var(--soft)}
 .look-intro p{font-size:1.02rem;line-height:1.9;margin-bottom:1.5rem}
 .look-intro p:last-child{margin-bottom:0}
+.why-list{width:min(760px,92%);margin:2.4rem auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.why-card{background:rgba(253,248,241,.68);border:1px solid var(--line);padding:1.25rem}
+.why-card h2{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:500;line-height:1.2;margin-bottom:.45rem;color:var(--ink)}
+.why-card p{font-size:.92rem;line-height:1.65;color:var(--soft)}
 
 .section-divider{width:48px;height:1px;background:var(--gold);margin:2.5rem auto}
 
@@ -55,7 +59,8 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:1rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.look-hero img{height:380px}.products-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.why-list{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(4rem,22vw,6rem);letter-spacing:.04em}.brand-small:before,.brand-small:after{width:40px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.look-hero{width:100%;height:auto}.look-hero img{width:100%;height:auto}.products-grid{grid-template-columns:1fr}}
 
 </style></head><body><div class="page">
 
@@ -83,78 +88,85 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
     </div>
   </div>
 
-  <div class="look-intro">
-    <p>There is a particular kind of quiet that the best bedrooms have. Not empty — just unhurried. A room where everything has been chosen carefully and nothing is there by accident. This is that kind of room.</p>
+  <div class="affiliate-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</div>
 
-    <p>Japanese interiors have always understood something that Western decorating often misses: that the floor is part of the design. A low bed changes the whole feeling of a space. You are closer to the ground, closer to stillness. The ceiling feels higher. The room feels larger. And somehow, without doing anything else at all, you feel calmer the moment you walk in.</p>
-
-    <p>Dark floorboards do the heavy lifting here. They anchor everything — the warmth of the wood against the pale marble wall, the greenness of the bamboo, the cream of the linen. Without them, the room would float. With them, it settles.</p>
-
-    <p>The bamboo is not decorative in the way a bunch of flowers is decorative. It is structural. Tall stems either side of the bed frame the whole composition, bringing something alive into a room that could otherwise feel too considered. There is movement in it. The light catches the leaves differently throughout the day.</p>
-
-    <p>The prints above the bed are the final piece. Chinese ink landscapes — mountains, mist, water, trees rendered in a handful of brushstrokes — have a quality of concentrated calm that is hard to find in any other kind of art. They do not demand attention. They reward it, quietly, if you choose to look.</p>
-
-    <p>This is not a difficult room to create. It does not need a renovation or a large budget. It needs restraint, a willingness to leave space empty, and a few things chosen well.</p>
-  </div>
-
-  <div class="section-divider"></div>
-
-  <div class="products-label">Pieces that create this look</div>
+  <div class="products-label">Shop the bamboo bedroom look</div>
 
   <div class="products-grid">
 
     <div class="product-card">
-      <div class="product-card-label">Bed · Low platform, Japanese style</div>
+      <div class="product-card-label">Bed frame</div>
       <h2>Japanese-Style Platform Bed Frame</h2>
-      <p>A low, clean-lined platform bed in solid wood — the kind that sits close to the floor and makes everything feel more grounded. No unnecessary height. Just the right amount of presence. This is the piece the whole room is built around.</p>
+      <p>A low, clean-lined wooden bed frame that gives the room its grounded Japandi shape. This is the main piece to get right if you want the calm platform-bed feeling.</p>
       <a class="buy-btn" href="https://amzn.to/4viP5DF" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Bed · Faster delivery option</div>
-      <h2>Low Platform Bed </h2>
-      <p>Same low, minimal aesthetic. A solid option that captures the spirit of the look without compromising on the clean lines that make it work.</p>
+      <div class="product-card-label">Bed frame</div>
+      <h2>Low Platform Bed</h2>
+      <p>A simpler low-bed option with the same minimal outline. Useful if you want the look without making the bed feel bulky or overdesigned.</p>
       <a class="buy-btn" href="https://amzn.to/4a7gpwr" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Plants · Tall bamboo</div>
+      <div class="product-card-label">Greenery</div>
       <h2>Tall Artificial Bamboo Plant</h2>
-      <p>Real bamboo is beautiful but demanding — it needs light, water and space to thrive indoors. These tall artificial stems look genuinely convincing and stay exactly where you put them. Placed either side of the bed they frame the whole room. No maintenance, no yellow leaves, no guilt.</p>
+      <p>Tall bamboo gives the bedroom height and a softer edge. Placed beside the bed, it frames the room without needing the care that real bamboo usually demands indoors.</p>
       <a class="buy-btn" href="https://amzn.to/4u4HPKw" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Bedding · Linen duvet set</div>
+      <div class="product-card-label">Bedding</div>
       <h2>Linen Bed Set</h2>
-      <p>Linen bedding is one of those things that looks better the more it is slept in. Slightly rumpled, warm, never too formal. The natural cream and oatmeal tones in this set sit perfectly against dark wood floors and a pale wall — and the weight of proper linen makes a bed feel genuinely luxurious without trying to.</p>
+      <p>Linen keeps the bed relaxed rather than overly neat. Cream and oatmeal tones work especially well against dark floors, pale walls and warm wood.</p>
       <a class="buy-btn" href="https://amzn.to/4x7FFg7" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Art · Chinese ink landscape prints</div>
+      <div class="product-card-label">Wall art</div>
       <h2>Chinese Ink Landscape Prints — British Museum</h2>
-      <p>The British Museum shop sells customisable prints from their Chinese collection — mountain landscapes, misty scenes, ink on paper. Properly framed and ready to hang. These are the real thing, not copies of copies. In thin dark frames above a low bed they are quietly extraordinary.</p>
+      <p>Quiet ink landscapes suit this bedroom better than busy artwork. Framed above a low bed, they add atmosphere without pulling focus from the simple shapes and textures.</p>
       <a class="buy-btn" href="https://www.britishmuseumshoponline.org/catalog/category/view/s/china/id/283/" target="_blank" rel="noopener noreferrer">Browse the collection →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Curtains · Sheer linen</div>
+      <div class="product-card-label">Curtains</div>
       <h2>Sheer Linen Curtains</h2>
-      <p>Long, loose, slightly pooling at the floor — the kind of curtains that move when there is a breeze and filter the light rather than blocking it out. Hung from a simple black iron rod they complete the look without competing with anything else in the room. These work in almost every window.</p>
+      <p>Sheer linen filters light instead of blocking it, which keeps the room soft during the day. Hang them long and simple so they feel relaxed rather than decorative.</p>
       <a class="buy-btn" href="https://amzn.to/4eb9jJL" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
     <div class="product-card">
-      <div class="product-card-label">Lighting · Bedside lamp</div>
+      <div class="product-card-label">Lighting</div>
       <h2>Tatami-Style Bedside Lamp</h2>
-      <p>Low, warm, and completely in keeping with the rest of the room. This lamp sits on the floor or a low surface and casts a gentle glow rather than a direct beam. In the evening it is what transforms this room from beautiful to properly restful. One either side of the bed would be perfect.</p>
+      <p>A low, warm lamp is better here than bright overhead light. It keeps the evening mood gentle and works well on the floor or a very low bedside surface.</p>
       <a class="buy-btn" href="https://amzn.to/43CR4H1" target="_blank" rel="noopener noreferrer sponsored">View on Amazon →</a>
     </div>
 
   </div>
 
-  <div class="affiliate-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</div>
+  <div class="section-divider"></div>
+
+  <div class="look-intro">
+    <p>This bamboo bedroom look is calm without feeling bare. The low bed, dark floorboards and tall greenery do most of the work, while linen bedding and quiet landscape prints keep the room soft and restful.</p>
+
+    <p>If you are starting from a plain bedroom, focus on shape and texture before decoration. Choose lower furniture, repeat natural materials, and keep the wall art simple so the whole space feels settled rather than styled.</p>
+  </div>
+
+  <div class="why-list" aria-label="Why this look works">
+    <div class="why-card">
+      <h2>Low furniture grounds the room</h2>
+      <p>A platform bed sits close to the floor, making the ceiling feel higher and the whole bedroom feel calmer.</p>
+    </div>
+    <div class="why-card">
+      <h2>Natural textures soften the space</h2>
+      <p>Linen, wood, bamboo and simple paper prints stop the dark floor and clean lines from feeling too stark.</p>
+    </div>
+    <div class="why-card">
+      <h2>Tall greenery adds height and life</h2>
+      <p>Bamboo either side of the bed frames the look and brings movement into an otherwise quiet room.</p>
+    </div>
+  </div>
 
   <a class="back-link" href="bedroom.html">← Back to Bedroom</a>
 
