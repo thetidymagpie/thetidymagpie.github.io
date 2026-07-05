@@ -29,8 +29,8 @@ body.pinterest-landing .top,body.pinterest-landing .header,body.pinterest-landin
 body.pinterest-landing .pinterest-bar{display:flex}
 body.pinterest-landing .pinterest-products{display:block}
 
-.look-hero{width:100%;max-height:580px;overflow:hidden;position:relative}
-.look-hero img{width:100%;height:580px;object-fit:cover;object-position:center 30%;display:block}
+.look-hero{width:min(760px,92%);margin:0 auto;position:relative}
+.look-hero img{width:100%;height:auto;object-fit:contain;display:block}
 .look-hero-caption{position:absolute;bottom:0;left:0;right:0;padding:2rem;background:linear-gradient(to top,rgba(44,39,34,.45),transparent);color:#fdf8f1;text-align:center}
 .look-hero-caption h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:500;letter-spacing:.06em;line-height:1.1;margin-bottom:.4rem}
 .look-hero-caption p{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85}
@@ -57,7 +57,7 @@ body.pinterest-landing .pinterest-products{display:block}
 footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.footer-inner{width:min(1180px,92%);margin:auto;display:flex;justify-content:space-between}
 
 @media(max-width:900px){.top{flex-direction:column;align-items:center;gap:.6rem;text-align:center}.top-right{flex-wrap:wrap;justify-content:center}}
-@media(max-width:560px){.brand-title{font-size:clamp(2.8rem,14vw,4.4rem);letter-spacing:.03em}.brand-small:before,.brand-small:after{width:32px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.look-hero img{height:380px}.products-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.brand-title{font-size:clamp(2.8rem,14vw,4.4rem);letter-spacing:.03em}.brand-small:before,.brand-small:after{width:32px}.nav-inner{justify-content:center}.footer-inner{flex-direction:column;gap:.5rem;text-align:center}.products-grid{grid-template-columns:1fr}}
 
 </style></head><body><div class="page">
 
