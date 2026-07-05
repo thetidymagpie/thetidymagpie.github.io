@@ -33,7 +33,7 @@ body.pinterest-landing .products-grid{display:none}
 body.pinterest-landing .shop-label,body.pinterest-landing .shop-sublabel{display:none}
 body.pinterest-landing .section-divider{display:none}
 
-/* Pinterest product grid inside the top strip */
+/* Pinterest product grid */
 .pinterest-products .products-grid-pinterest{width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1rem}
 .pinterest-products .product-card{background:var(--white);border:1px solid var(--line);padding:1.6rem;display:flex;flex-direction:column;gap:.8rem;transition:transform .2s ease,border-color .2s ease}
 .pinterest-products .product-card:hover{transform:translateY(-2px);border-color:var(--sage)}
@@ -76,39 +76,35 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
 <div class="pinterest-bar"><a class="pb-logo" href="index.html">The Tidy Magpie</a><button class="hamburger-btn" id="hamburgerBtn" type="button" aria-label="Open menu"><span></span><span></span><span></span></button></div><div class="pinterest-nav-panel" id="pinterestNav"><a href="index.html">Home</a><a href="living-spaces.html">Living Spaces</a><a href="bathroom.html">Bathroom</a><a href="kitchen.html">Kitchen</a><a href="garden.html">Garden</a><a href="bedroom.html">Bedroom</a><a class="active" href="journal.html">Journal</a><a href="imagination-gallery.html">Imagination Gallery</a><a href="about.html">About</a></div>
 
-<div class="pinterest-products" id="pinterestProducts">
-  <p class="pp-label">Shop this article</p>
-  <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
-  <div class="products-grid-pinterest" id="pinterestCardGrid">
-    <!-- JS will clone product cards here in Pinterest mode -->
-  </div>
-  <div class="pp-divider"></div>
-</div>
-
 <main>
   <div class="article-wrap">
     <div class="article-label">Garden · Outdoor living</div>
     <h1>Small Garden Ideas That Make Your Home Feel Bigger</h1>
     <img class="article-hero" src="images/garden-home-bigger.png" alt="A small but beautifully arranged garden patio with festoon lights, a garden sofa with cushions, large ceramic pots and a woven outdoor mat">
-    <div class="article-body">
-      <p>There is a particular kind of magic that happens when a small outdoor space is done well. It stops feeling like a limitation and starts feeling like a destination — somewhere you actually want to take your morning coffee, or sit with a glass of wine at the end of the day. The trick is not square footage. It is intention.</p>
-      <p>Whether you have a compact courtyard, a narrow terrace, a tiny patio or just a sliver of a garden, the principles are the same. A few well-chosen things, placed thoughtfully, do far more than a garden full of unrelated pieces. Small spaces reward editing. They reward restraint. And they reward the kind of small decisions that make a space feel genuinely considered.</p>
-      <p>The first thing worth understanding is that small gardens do not need to be made to feel bigger. They need to be made to feel good. A well-designed small garden that feels intimate and complete is always preferable to one that is trying — and failing — to impersonate something larger. Work with the scale, not against it.</p>
-      <p>One of the most effective things you can do is define the space with an outdoor mat. This sounds almost too simple, but it genuinely transforms a patio or courtyard. A well-chosen mat creates an instant room — the eye registers it as a defined living area rather than just a patch of paving. It anchors your furniture, gives the whole setup a sense of intention and makes the space feel finished in a way that is hard to achieve otherwise. In a small space, a mat that is slightly too generous reads better than one that is too small — it makes the area feel more expansive rather than pinched.</p>
-      <p>Lighting changes everything once the sun goes down. Festoon lights are one of the best small-garden investments there is — warm, atmospheric and completely transformative in the evening. String them overhead between two walls, along a fence line or draped above a seating area. The key is warm bulbs. They do what candlelight does indoors: they make the space feel intimate and alive rather than simply illuminated. In a small garden, that warm glow in the hours after dark makes the space feel cosy rather than compact.</p>
-      <p>Planting is where many small gardens go wrong. The instinct is to fill every corner with small pots and trailing things, and the result is a space that feels cluttered and busy. The better approach is to go bigger with fewer pieces. One or two large pots with architectural plants — an olive tree, a fatsia, a clipped standard bay — create a focal point and give the space a sense of scale and purpose that a dozen small pots simply cannot. Large pots also hold moisture better through dry spells, which means healthier plants with less effort.</p>
-      <p>Comfortable seating is perhaps the single most important upgrade a small garden can have. A proper garden sofa with deep cushions does something fundamental — it signals that this is somewhere to actually be, not just pass through. It changes the entire relationship you have with your outdoor space. In a small area, look for furniture with clean lines and legs that allow light to pass underneath, which keeps the space feeling open. Add a side table, a couple of cushions in a calm palette and you have an outdoor room genuinely worth spending time in.</p>
-      <p>Beyond the essentials, there are a few other things worth considering. Vertical space is underused in almost every small garden — walls and fences are prime real estate for climbers, wall-mounted planters or a simple shelf of pots. Fragrant plants earn their place too: a jasmine on the fence, lavender along a border or rosemary by the door makes a small garden feel luxurious every time you step into it. And keeping at least one sightline clear — to a statement plant, a wall feature or simply open sky — prevents the space from feeling hemmed in.</p>
-      <p>The best small gardens are not the ones that try to do everything. They are the ones that do a few things very well — and make you forget you ever wanted more space.</p>
-    </div>
   </div>
 
-  <div class="section-divider"></div>
+  <div class="affiliate-note">Ad | If you buy through our links we may earn a small commission, at no extra cost to you.</div>
+
+  <div class="pinterest-products" id="pinterestProducts">
+    <p class="pp-label">Shop this article</p>
+    <p class="pp-note">Ad | Affiliate links. If you buy through our links we may earn a small commission, at no extra cost to you.</p>
+    <div class="products-grid-pinterest" id="pinterestCardGrid">
+      <!-- JS will clone product cards here in Pinterest mode -->
+    </div>
+    <div class="pp-divider"></div>
+  </div>
 
   <div class="shop-label">Shop the Small Garden look</div>
   <div class="shop-sublabel">Ad | Affiliate links</div>
 
   <div class="products-grid" id="mainProductGrid">
+
+    <div class="product-card">
+      <div class="product-card-label">Garden structure</div>
+      <h2>Wooden Pergola</h2>
+      <p>A simple wooden pergola for adding height, structure and a more finished feel to a garden seating area. Useful for framing an outdoor dining spot, patio corner or planted walkway.</p>
+      <a class="buy-btn" href="https://amzn.to/4eY1y9o" target="_blank" rel="noopener noreferrer sponsored">View on Amazon</a>
+    </div>
 
     <div class="product-card">
       <div class="product-card-label">Patio · Outdoor mat</div>
@@ -140,7 +136,22 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 
   </div>
 
-  <div class="affiliate-note">Ad | If you buy through our links we may earn a small commission, at no extra cost to you.</div>
+  <div class="section-divider"></div>
+
+  <div class="article-wrap">
+    <div class="article-body">
+      <p>There is a particular kind of magic that happens when a small outdoor space is done well. It stops feeling like a limitation and starts feeling like a destination — somewhere you actually want to take your morning coffee, or sit with a glass of wine at the end of the day. The trick is not square footage. It is intention.</p>
+      <p>Whether you have a compact courtyard, a narrow terrace, a tiny patio or just a sliver of a garden, the principles are the same. A few well-chosen things, placed thoughtfully, do far more than a garden full of unrelated pieces. Small spaces reward editing. They reward restraint. And they reward the kind of small decisions that make a space feel genuinely considered.</p>
+      <p>The first thing worth understanding is that small gardens do not need to be made to feel bigger. They need to be made to feel good. A well-designed small garden that feels intimate and complete is always preferable to one that is trying — and failing — to impersonate something larger. Work with the scale, not against it.</p>
+      <p>One of the most effective things you can do is define the space with an outdoor mat. This sounds almost too simple, but it genuinely transforms a patio or courtyard. A well-chosen mat creates an instant room — the eye registers it as a defined living area rather than just a patch of paving. It anchors your furniture, gives the whole setup a sense of intention and makes the space feel finished in a way that is hard to achieve otherwise. In a small space, a mat that is slightly too generous reads better than one that is too small — it makes the area feel more expansive rather than pinched.</p>
+      <p>Lighting changes everything once the sun goes down. Festoon lights are one of the best small-garden investments there is — warm, atmospheric and completely transformative in the evening. String them overhead between two walls, along a fence line or draped above a seating area. The key is warm bulbs. They do what candlelight does indoors: they make the space feel intimate and alive rather than simply illuminated. In a small garden, that warm glow in the hours after dark makes the space feel cosy rather than compact.</p>
+      <p>Planting is where many small gardens go wrong. The instinct is to fill every corner with small pots and trailing things, and the result is a space that feels cluttered and busy. The better approach is to go bigger with fewer pieces. One or two large pots with architectural plants — an olive tree, a fatsia, a clipped standard bay — create a focal point and give the space a sense of scale and purpose that a dozen small pots simply cannot. Large pots also hold moisture better through dry spells, which means healthier plants with less effort.</p>
+      <p>Comfortable seating is perhaps the single most important upgrade a small garden can have. A proper garden sofa with deep cushions does something fundamental — it signals that this is somewhere to actually be, not just pass through. It changes the entire relationship you have with your outdoor space. In a small area, look for furniture with clean lines and legs that allow light to pass underneath, which keeps the space feeling open. Add a side table, a couple of cushions in a calm palette and you have an outdoor room genuinely worth spending time in.</p>
+      <p>Beyond the essentials, there are a few other things worth considering. Vertical space is underused in almost every small garden — walls and fences are prime real estate for climbers, wall-mounted planters or a simple shelf of pots. Fragrant plants earn their place too: a jasmine on the fence, lavender along a border or rosemary by the door makes a small garden feel luxurious every time you step into it. And keeping at least one sightline clear — to a statement plant, a wall feature or simply open sky — prevents the space from feeling hemmed in.</p>
+      <p>The best small gardens are not the ones that try to do everything. They are the ones that do a few things very well — and make you forget you ever wanted more space.</p>
+    </div>
+  </div>
+
   <a class="back-link" href="journal.html">← Back to Journal</a>
 
 </main>
@@ -150,7 +161,9 @@ footer{background:#738061;color:#fbf6ee;padding:1.3rem 0;font-size:.72rem;letter
 </div>
 <script>
 (function(){
-  var isPinterest = document.referrer.indexOf('pinterest.')!==-1;
+  var params = new URLSearchParams(window.location.search);
+  var source = (params.get('utm_source') || '').toLowerCase();
+  var isPinterest = document.referrer.indexOf('pinterest.')!==-1 || source === 'pinterest';
   // var isPinterest = true; // uncomment to test locally
   var btn=document.getElementById('hamburgerBtn');
   var panel=document.getElementById('pinterestNav');
